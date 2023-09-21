@@ -27,3 +27,6 @@ learned basic commands for Git
 wrote code for the structure of html for ohmyfood homapage
 
 started short course on sass
+
+deleted /Images+et+textes+Ohmyfood and moved its content to /assets
+
