@@ -1,0 +1,36 @@
+/* General*/
+* {
+    font-family: 'Shrikhand';
+    font-family: 'Roboto', sans-serif;
+} 
+
+:root {
+    --color-one: #F3F3F3;
+    --color-two: #99E2D0;
+    --color-three: #008766;
+    --color-four: #89C8FA;
+    --color-five: #003A68;
+    --color-six: #9356DC;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+
+
+/* Small devices (less than or equal to 768px) */
+@media (max-width: 768px) {
+
+
+
+}
