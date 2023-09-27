@@ -1,0 +1,275 @@
+/* General*/
+* {
+  font-family: "Shrikhand" sans-serif;
+  font-family: "Roboto";
+}
+
+:root {
+  --color-one: #F3F3F3;
+  --color-two: #99E2D0;
+  --color-three: #008766;
+  --color-four: #89C8FA;
+  --color-five: #003A68;
+  --color-six: #9356DC;
+  --color-seven: #EAEAEA;
+  --color-eight: #353535;
+  --color-nine: #F6F6F6;
+  --color-ten: #FFFFFF;
+  --color-eleven: #FF79DA;
+  --color-twelve: #7E7E7E;
+  --color-thirteen: #000000;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+}
+
+/* HEADER block */
+.main-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.main-header .logo-container {
+  width: 197px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.main-header .logo-container .logo-image {
+  width: 162px;
+  height: 28.09px;
+}
+
+/* end HEADER block */
+/* LOCATION block */
+.location-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-seven);
+}
+.location-container .fa-location-dot {
+  color: var(--color-eight);
+}
+.location-container .location-description {
+  margin: 0;
+  color: var(--color-eight);
+}
+
+/* end LOCATION block */
+/* RESERVATION block */
+.reservation-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-nine);
+}
+.reservation-container .reservation-title {
+  margin-top: 39px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0 50px;
+}
+.reservation-container .reservation-description {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-size: 18px;
+  color: var(--color-eight);
+  display: flex;
+  text-align: center;
+}
+.reservation-container .explore-btn {
+  margin-bottom: 60px;
+  background: linear-gradient(180deg, var(--color-eleven), var(--color-six));
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.reservation-container .explore-btn .explore-btn-description {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--color-ten);
+}
+
+/* end RESERVATION block */
+/* FONCTIONNEMENT block */
+.fonctionnement-container {
+  height: 375px;
+  padding: 0 20px;
+}
+.fonctionnement-container .fonctionnement-title {
+  font-weight: 700;
+}
+.fonctionnement-container .fonctionnement-buttons-group {
+  padding-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button {
+  padding: 0;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 72px;
+  width: 322.5px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .violet-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-six);
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin-left: -12px;
+}
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .violet-circle .number-cirle {
+  color: #FFFFFF;
+  margin: 0;
+}
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-mobile-screen-button,
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-list-ul,
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-store {
+  color: var(--color-twelve);
+  margin: 0 24px;
+  font-size: 16px;
+}
+.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .btn-description {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* end FONCTIONNEMENT block */
+/* MAIN block */
+.restaurants-main {
+  background-color: var(--color-seven);
+  width: 100%;
+}
+.restaurants-main .restaurants-title {
+  margin: 0 17.5px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.restaurants-main .restos-cards-container {
+  margin: 0 17.5px;
+}
+.restaurants-main .restos-cards-container .resto-card-link {
+  text-decoration: none;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card {
+  position: relative;
+  height: 251px;
+  margin-bottom: 18px;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-nouveau-container {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  background-color: var(--color-two);
+  top: 13px;
+  right: 13px;
+  border-radius: 2px;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-nouveau-container .resto-nouveau-description {
+  margin: 6px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: var(--color-three);
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-image {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description {
+  border-radius: 0 0 15px 15px;
+  background-color: var(--color-ten);
+  padding-left: 14px;
+  height: 76px;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .resto-name {
+  padding-top: 12px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-thirteen);
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .resto-location {
+  padding-top: 5px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--color-thirteen);
+}
+
+/* end MAIN block */
+/* FOOTER block */
+footer {
+  background-color: var(--color-eight);
+  height: 146px;
+  padding: 20px;
+}
+footer .footer-logo {
+  display: flex;
+  justify-content: start;
+}
+footer .footer-logo .footer-logo-image {
+  filter: invert(100%);
+  width: 100px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+footer .footer-icons-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-icons-text .fa-handshake-angle,
+footer .footer-icons-text .fa-utensils {
+  color: #FFFFFF;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+footer .footer-icons-text .footer-text {
+  margin: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* end FOOTER block */
+/* tablet and desktop (equal or more than 768px) *//*# sourceMappingURL=styles.css.map */
