@@ -98,7 +98,7 @@ body {
 }
 .reservation-container .explore-btn {
   margin-bottom: 60px;
-  background: linear-gradient(180deg, var(--color-eleven), var(--color-six));
+  background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
   width: 218px;
   height: 50px;
   border: none;
@@ -114,23 +114,23 @@ body {
 }
 
 /* end RESERVATION block */
-/* FONCTIONNEMENT block */
-.fonctionnement-container {
+/* FUNCTIONING block */
+.functioning-container {
   height: 375px;
   padding: 0 20px;
 }
-.fonctionnement-container .fonctionnement-title {
+.functioning-container .functioning-title {
   font-weight: 700;
 }
-.fonctionnement-container .fonctionnement-buttons-group {
+.functioning-container .functioning-btns-group {
   padding-left: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button {
-  padding: 0;
+.functioning-container .functioning-btns-group .functioning-btn {
+  background-color: var(--color-nine);
   border-radius: 15px;
   border: none;
   display: flex;
@@ -141,7 +141,7 @@ body {
   margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .violet-circle {
+.functioning-container .functioning-btns-group .functioning-btn .violet-circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,27 +151,27 @@ body {
   border-radius: 12px;
   margin-left: -12px;
 }
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .violet-circle .number-cirle {
+.functioning-container .functioning-btns-group .functioning-btn .violet-circle .number-cirle {
   color: #FFFFFF;
   margin: 0;
 }
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-mobile-screen-button,
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-list-ul,
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .fa-store {
+.functioning-container .functioning-btns-group .functioning-btn .fa-mobile-screen-button,
+.functioning-container .functioning-btns-group .functioning-btn .fa-list-ul,
+.functioning-container .functioning-btns-group .functioning-btn .fa-store {
   color: var(--color-twelve);
   margin: 0 24px;
   font-size: 16px;
 }
-.fonctionnement-container .fonctionnement-buttons-group .functionnement-button .btn-description {
+.functioning-container .functioning-btns-group .functioning-btn .btn-description {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
 }
 
-/* end FONCTIONNEMENT block */
-/* MAIN block */
+/* end FUNCTIONING block */
+/* RESTAURANTS block */
 .restaurants-main {
-  background-color: var(--color-seven);
+  background-color: var(--color-nine);
   width: 100%;
 }
 .restaurants-main .restaurants-title {
@@ -236,7 +236,7 @@ body {
   color: var(--color-thirteen);
 }
 
-/* end MAIN block */
+/* end RESTAURANTS block */
 /* FOOTER block */
 footer {
   background-color: var(--color-eight);
@@ -253,18 +253,21 @@ footer .footer-logo .footer-logo-image {
   height: 18px;
   margin-bottom: 20px;
 }
-footer .footer-icons-text {
+footer .footer-icons-descriptions-container {
+  background-color: var(--color-four);
+}
+footer .footer-icons-descriptions-container .footer-icon-description {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-footer .footer-icons-text .fa-handshake-angle,
-footer .footer-icons-text .fa-utensils {
+footer .footer-icons-descriptions-container .footer-icon-description .fa-handshake-angle,
+footer .footer-icons-descriptions-container .footer-icon-description .fa-utensils {
   color: #FFFFFF;
   margin-right: 10px;
   margin-bottom: 10px;
 }
-footer .footer-icons-text .footer-text {
+footer .footer-icons-descriptions-container .footer-icon-description .footer-description {
   margin: 0;
   font-size: 16px;
   color: #FFFFFF;

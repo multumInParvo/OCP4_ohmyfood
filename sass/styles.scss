@@ -104,7 +104,7 @@ body {
 
     .explore-btn {
         margin-bottom: 60px;
-        background: linear-gradient(180deg, var(--color-eleven), var(--color-six));
+        background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
         width: 218px;
         height: 50px;
         border: none;
@@ -122,23 +122,23 @@ body {
 }
 /* end RESERVATION block */
 
-/* FONCTIONNEMENT block */
-.fonctionnement-container {
+/* FUNCTIONING block */
+.functioning-container {
     height: 375px;
     padding: 0 20px;
 
-    .fonctionnement-title {
+    .functioning-title {
         font-weight: 700;
     }
-    .fonctionnement-buttons-group {
+    .functioning-btns-group {
         padding-left: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
 
-        .functionnement-button {
-            padding: 0;
+        .functioning-btn {
+            background-color: var(--color-nine);
             border-radius: 15px;
             border: none;
             display: flex;
@@ -182,11 +182,11 @@ body {
     }
 }
 
-/* end FONCTIONNEMENT block */
+/* end FUNCTIONING block */
 
-/* MAIN block */
+/* RESTAURANTS block */
 .restaurants-main {
-    background-color: var(--color-seven);
+    background-color: var(--color-nine);
     width: 100%;
 
     .restaurants-title {
@@ -259,7 +259,7 @@ body {
         }
     }
 }
-/* end MAIN block */
+/* end RESTAURANTS block */
 
 /* FOOTER block */
 footer {
@@ -279,28 +279,29 @@ footer {
         }
     }
 
-    .footer-icons-text {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .footer-icons-descriptions-container {
+        background-color: var(--color-four);
 
-        .fa-handshake-angle,
-        .fa-utensils {
-            color: #FFFFFF;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .footer-text {
-            margin: 0;
-            font-size: 16px;
-            color: #FFFFFF;
-            font-weight: 500;
+        .footer-icon-description {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            .fa-handshake-angle,
+            .fa-utensils {
+                color: #FFFFFF;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+    
+            .footer-description {
+                margin: 0;
+                font-size: 16px;
+                color: #FFFFFF;
+                font-weight: 500;
+            }
         }
     }
-    // .footer-only-text {
-        
-    // }
 }
 /* end FOOTER block */
 
