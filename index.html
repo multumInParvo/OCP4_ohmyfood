@@ -53,7 +53,7 @@
 
             <button class="functioning-btn">
               <div class="violet-circle">
-                <p class="number-cirle">1</p>
+                <p class="number-circle">1</p>
               </div>
               <i class="fa-solid fa-mobile-screen-button"></i>
               <p class="btn-description">Choisissez un restaurant</p>
@@ -61,7 +61,7 @@
 
             <button class="functioning-btn">
               <div class="violet-circle">
-                <p class="number-cirle">2</p>
+                <p class="number-circle">2</p>
               </div>
               <i class="fa-solid fa-list-ul"></i>
               <p class="btn-description">Composez votre menu</p>
@@ -69,7 +69,7 @@
 
             <button class="functioning-btn">
               <div class="violet-circle">
-                <p class="number-cirle">3</p>
+                <p class="number-circle">3</p>
               </div>
               <i class="fa-solid fa-store"></i>
               <p class="btn-description">Dégustez au restaurant</p>
@@ -88,7 +88,7 @@
         <div class="restos-cards-container">
 
             <!-- restaurant La palette du goût -->
-            <a href="#" class="resto-card-link">
+            <a href="/restaurants/la_palette_du_gout.html" class="resto-card-link">
               <article class="resto-card">
 
                 <div class="resto-nouveau-container">
@@ -99,6 +99,15 @@
                 <div class="resto-description">
                   <h3 class="resto-name">La palette du goût</h3>
                   <p class="resto-location">Ménilmontant</p>
+
+                  <!-- heart fill -->
+                  <input type="checkbox" id="heart-toggle" class="hidden">
+                  <label for="heart-toggle" class="heart-label">
+                    <i class="fa-regular fa-heart"></i> <!-- Empty heart icon -->
+                    <i class="fa-solid fa-heart"></i> <!-- Filled heart icon -->
+                  </label>
+                  <!-- end heart fill -->
+
                 </div>
               </article>
             </a>
@@ -150,10 +159,8 @@
       <footer>
 
         <article class="footer-logo">
-          <img class="footer-logo-image" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+          <img class="footer-logo-image" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </article>
-
-        <article class="footer-icons-descriptions-container">
 
           <div class="footer-icon-description">
             <i class="fa-solid fa-utensils"></i>
@@ -165,17 +172,9 @@
             <p class="footer-description">Devenir partenaire</p>
           </div>  
 
-        </article>
-
-        <article class="footer-only-description-container">
-
-          <div class="footer-only-description">
-            <p class="footer-mention-description">Mentions légales</p>
-            <p class="footer-contact-description">Contact</p>
-          </div>
-          
-        </article>
-
+            <p class="footer-text-description">Mentions légales</p>
+            <p class="footer-text-description">Contact</p>
+        
       </footer>
     <!-- end FOOTER block-->
   </div>
