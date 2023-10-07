@@ -1,0 +1,224 @@
+* {
+  font-family: "Shrikhand" sans-serif;
+  font-family: "Roboto";
+}
+
+:root {
+  --color-one: #F3F3F3;
+  --color-two: #99E2D0;
+  --color-three: #008766;
+  --color-four: #89C8FA;
+  --color-five: #003A68;
+  --color-six: #9356DC;
+  --color-seven: #EAEAEA;
+  --color-eight: #353535;
+  --color-nine: #F6F6F6;
+  --color-ten: #FFFFFF;
+  --color-eleven: #FF79DA;
+  --color-twelve: #7E7E7E;
+  --color-thirteen: #000000;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.main-header .arrow-container {
+  padding-left: 13px;
+  text-decoration: none;
+}
+.main-header .arrow-container .fa-arrow-left {
+  font-size: 22px;
+  color: var(--color-eight);
+}
+.main-header .logo-container {
+  width: 197px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.main-header .logo-container .logo-image {
+  width: 162px;
+  height: 28.09px;
+}
+
+.resto-image {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.menu-container {
+  align-items: center;
+  background-color: var(--color-nine);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  margin-top: -55px;
+  position: relative;
+}
+.menu-container .resto-name-like {
+  display: flex;
+  justify-content: space-between;
+  width: 349px;
+  padding-top: 31px;
+  padding-left: 20px;
+  margin-bottom: -10px;
+}
+.menu-container .resto-name-like .resto-name {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0;
+}
+.menu-container .resto-name-like .fa-heart {
+  font-size: x-large;
+  padding-right: 30px;
+  padding-top: 5px;
+}
+.menu-container .segment-title {
+  color: black;
+  position: relative;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+  padding-left: 13px;
+  padding-top: 35px;
+  margin-bottom: 25px;
+}
+.menu-container .segment-title::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  bottom: -9px;
+  left: 13px;
+  background-color: #99E2D0;
+}
+.menu-container .segment-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+.menu-container .segment-menu .segment-btn {
+  width: 349px;
+  height: 70px;
+  background-color: var(--color-ten);
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.menu-container .segment-menu .segment-btn .dish-name-description {
+  display: flex;
+  align-items: start;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-container .segment-menu .segment-btn .dish-name-description .dish-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.menu-container .segment-menu .segment-btn .dish-name-description .dish-description {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+}
+.menu-container .segment-menu .segment-btn .dish-detail {
+  padding-top: 30px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+.menu-container .order-btn {
+  margin: 39px 94px 39px 94px;
+  background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
+  width: 186px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: opacity 800ms ease;
+}
+.menu-container .order-btn:hover {
+  opacity: 0.8;
+}
+.menu-container .order-btn .order-btn-description {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--color-ten);
+}
+
+footer {
+  background-color: var(--color-eight);
+  height: 134px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 26px;
+}
+footer .footer-logo {
+  display: flex;
+  justify-content: start;
+}
+footer .footer-logo .footer-logo-image {
+  filter: invert(100%);
+  width: 100px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+footer .footer-icon-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 7px;
+}
+footer .footer-icon-description .fa-utensils {
+  margin-right: 10px;
+  font-size: 14px;
+  color: var(--color-ten);
+}
+footer .footer-icon-description .fa-handshake-angle {
+  margin-right: 10px;
+  font-size: 11px;
+  color: var(--color-ten);
+}
+footer .footer-icon-description .footer-description {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-ten);
+  font-weight: 400;
+}
+footer .footer-text-description {
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-ten);
+}/*# sourceMappingURL=la_palette_du_gout.css.map */
