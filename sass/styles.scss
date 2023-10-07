@@ -111,6 +111,11 @@ body {
         border-radius: 25px;
         cursor: pointer;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        transition: opacity 800ms ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
 
         .explore-btn-description {
             font-weight: 500;
@@ -139,7 +144,7 @@ body {
 
         .functioning-btn {
             background-color: var(--color-nine);
-            border-radius: 15px;
+            border-radius: 20px;
             border: none;
             display: flex;
             flex-direction: row;
@@ -159,7 +164,7 @@ body {
                 border-radius: 12px;
                 margin-left: -12px;
 
-                .number-cirle {
+                .number-circle {
                     color: #FFFFFF;
                     margin: 0;
                 }
@@ -253,7 +258,44 @@ body {
                         font-size: 17px;
                         font-weight: 300;
                         color: var(--color-thirteen);
-                    }
+                    }     
+                    
+                    /* heart fill */ 
+
+                    .hidden {
+                        display: none;
+                      }
+                      
+                      .heart-label {
+                        cursor: pointer;
+                        display: inline-block;
+
+                        .fa-regular,
+                        .fa-solid {
+                            font-size: x-large;
+                        }
+
+                        .fa-regular {
+                            color: #000000;
+                          }
+                        
+                          .fa-solid {
+                            color: transparent;
+                          }
+                        }
+                        
+                        #heart-toggle:checked + .heart-label {
+                         .fa-solid {
+                            background: linear-gradient(180deg, var(--color-six) -20%, var(--color-eleven) 100%);
+                            background-clip: text;
+                          }
+
+                         .fa-regular {
+                            display: none;
+                          }
+                        }
+
+                    /* end heart fill */
                 }
             }
         }
@@ -264,8 +306,10 @@ body {
 /* FOOTER block */
 footer {
     background-color: var(--color-eight);
-    height: 146px;
-    padding: 20px;
+    height: 134px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 26px;
 
     .footer-logo {
         display: flex;
@@ -279,28 +323,39 @@ footer {
         }
     }
 
-    .footer-icons-descriptions-container {
-        background-color: var(--color-four);
+    .footer-icon-description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 7px;
 
-        .footer-icon-description {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-    
-            .fa-handshake-angle,
-            .fa-utensils {
-                color: #FFFFFF;
-                margin-right: 10px;
-                margin-bottom: 10px;
-            }
-    
-            .footer-description {
-                margin: 0;
-                font-size: 16px;
-                color: #FFFFFF;
-                font-weight: 500;
-            }
+        .fa-utensils {
+            margin-right: 10px;
+            font-size: 14px;
+            color: var(--color-ten);
         }
+
+        .fa-handshake-angle {
+            margin-right: 10px;
+            font-size: 11px;
+            color: var(--color-ten);
+        }
+
+        .footer-description {
+            margin: 0;
+            font-size: 16px;
+            color: var(--color-ten);
+            font-weight: 400;
+        }
+    }
+    
+    .footer-text-description {
+        margin: 0;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--color-ten);
     }
 }
 /* end FOOTER block */
