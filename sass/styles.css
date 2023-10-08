@@ -120,11 +120,13 @@ body {
 /* end RESERVATION block */
 /* FUNCTIONING block */
 .functioning-container {
-  height: 375px;
   padding: 0 20px;
+  margin-bottom: 64px;
 }
 .functioning-container .functioning-title {
   font-weight: 700;
+  margin-top: 45px;
+  margin-bottom: 35px;
 }
 .functioning-container .functioning-btns-group {
   padding-left: 12px;
@@ -132,6 +134,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 25px;
 }
 .functioning-container .functioning-btns-group .functioning-btn {
   background-color: var(--color-nine);
@@ -142,7 +145,6 @@ body {
   align-items: center;
   height: 72px;
   width: 322.5px;
-  margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .functioning-container .functioning-btns-group .functioning-btn .violet-circle {
@@ -164,7 +166,7 @@ body {
 .functioning-container .functioning-btns-group .functioning-btn .fa-store {
   color: var(--color-twelve);
   margin: 0 24px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .functioning-container .functioning-btns-group .functioning-btn .btn-description {
   margin: 0;
@@ -177,8 +179,11 @@ body {
 .restaurants-main {
   background-color: var(--color-nine);
   width: 100%;
+  padding-bottom: 49px;
 }
 .restaurants-main .restaurants-title {
+  padding-top: 52px;
+  padding-bottom: 20px;
   margin: 0 17.5px;
   font-size: 24px;
   font-weight: 700;
@@ -192,7 +197,7 @@ body {
 .restaurants-main .restos-cards-container .resto-card-link .resto-card {
   position: relative;
   height: 251px;
-  margin-bottom: 18px;
+  padding-bottom: 18px;
 }
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-nouveau-container {
   position: absolute;
@@ -233,6 +238,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: var(--color-thirteen);
+  width: 150px;
 }
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .resto-location {
   padding-top: 5px;
@@ -240,31 +246,13 @@ body {
   font-size: 17px;
   font-weight: 300;
   color: var(--color-thirteen);
+  width: 150px;
 }
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .hidden {
-  display: none;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-label {
-  cursor: pointer;
-  display: inline-block;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-label .fa-regular,
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-label .fa-solid {
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .fa-heart {
   font-size: x-large;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-label .fa-regular {
-  color: #000000;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-label .fa-solid {
-  color: transparent;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description #heart-toggle:checked + .heart-label .fa-solid {
-  background: linear-gradient(180deg, var(--color-six) -20%, var(--color-eleven) 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description #heart-toggle:checked + .heart-label .fa-regular {
-  display: none;
+  display: flex;
+  justify-content: end;
+  color: var(--color-thirteen);
 }
 
 /* end RESTAURANTS block */
@@ -272,9 +260,7 @@ body {
 footer {
   background-color: var(--color-eight);
   height: 134px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  padding-left: 26px;
+  padding: 26px 0 26px 26px;
 }
 footer .footer-logo {
   display: flex;

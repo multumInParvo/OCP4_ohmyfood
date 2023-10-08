@@ -129,11 +129,13 @@ body {
 
 /* FUNCTIONING block */
 .functioning-container {
-    height: 375px;
     padding: 0 20px;
+    margin-bottom: 64px;
 
     .functioning-title {
         font-weight: 700;
+        margin-top: 45px;
+        margin-bottom: 35px;
     }
     .functioning-btns-group {
         padding-left: 12px;
@@ -141,6 +143,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        gap: 25px;
 
         .functioning-btn {
             background-color: var(--color-nine);
@@ -151,7 +154,6 @@ body {
             align-items: center;
             height: 72px;
             width: 322.5px;
-            margin-bottom: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
             .violet-circle {
@@ -175,7 +177,7 @@ body {
             .fa-store {
                 color: var(--color-twelve);
                 margin: 0 24px;
-                font-size: 16px;
+                font-size: 18px;
             }
 
             .btn-description {
@@ -193,8 +195,11 @@ body {
 .restaurants-main {
     background-color: var(--color-nine);
     width: 100%;
+    padding-bottom: 49px;
 
     .restaurants-title {
+        padding-top: 52px;
+        padding-bottom: 20px;
         margin: 0 17.5px;
         font-size: 24px;
         font-weight: 700;
@@ -209,7 +214,7 @@ body {
             .resto-card {
                 position: relative;
                 height: 251px;
-                margin-bottom: 18px;
+                padding-bottom: 18px;
 
                 .resto-nouveau-container {
                     position: absolute;
@@ -250,6 +255,7 @@ body {
                         font-size: 18px;
                         font-weight: 700;
                         color: var(--color-thirteen);
+                        width: 150px;
                     }
 
                     .resto-location {
@@ -258,42 +264,18 @@ body {
                         font-size: 17px;
                         font-weight: 300;
                         color: var(--color-thirteen);
+                        width: 150px;
                     }     
                     
                     /* heart fill */ 
 
-                    .hidden {
-                        display: none;
-                      }
-                      
-                      .heart-label {
-                        cursor: pointer;
-                        display: inline-block;
-
-                        .fa-regular,
-                        .fa-solid {
-                            font-size: x-large;
-                        }
-
-                        .fa-regular {
-                            color: #000000;
-                          }
+                    .fa-heart {
+                        font-size: x-large;
+                        display: flex;
+                        justify-content: end;
+                        color: var(--color-thirteen);
                         
-                          .fa-solid {
-                            color: transparent;
-                          }
-                        }
-                        
-                        #heart-toggle:checked + .heart-label {
-                         .fa-solid {
-                            background: linear-gradient(180deg, var(--color-six) -20%, var(--color-eleven) 100%);
-                            background-clip: text;
-                          }
-
-                         .fa-regular {
-                            display: none;
-                          }
-                        }
+                    }
 
                     /* end heart fill */
                 }
@@ -307,9 +289,7 @@ body {
 footer {
     background-color: var(--color-eight);
     height: 134px;
-    padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 26px;
+    padding: 26px 0 26px 26px;
 
     .footer-logo {
         display: flex;
