@@ -3,22 +3,21 @@
     font-family: 'Shrikhand' sans-serif;
     font-family: 'Roboto';
 } 
-
-:root {
-    --color-one: #F3F3F3;
-    --color-two: #99E2D0;
-    --color-three: #008766;
-    --color-four: #89C8FA;
-    --color-five: #003A68;
-    --color-six: #9356DC;
-    --color-seven: #EAEAEA;
-    --color-eight: #353535;
-    --color-nine: #F6F6F6;
-    --color-ten: #FFFFFF;
-    --color-eleven: #FF79DA;
-    --color-twelve: #7E7E7E;
-    --color-thirteen: #000000;
-}
+/* var colors */ 
+    $one: #F3F3F3;
+    $two: #99E2D0;
+    $three: #008766;
+    $four: #89C8FA;
+    $five: #003A68;
+    $six: #9356DC;
+    $seven: #EAEAEA;
+    $eight: #353535;
+    $nine: #F6F6F6;
+    $ten: #FFFFFF;
+    $eleven: #FF79DA;
+    $twelve: #7E7E7E;
+    $thirteen: #000000;
+/* end var colors */ 
 
 body {
     margin: 0;
@@ -45,7 +44,7 @@ body {
 
         .fa-arrow-left {
             font-size: 22px;
-            color: var(--color-eight);
+            color: $eight;
         }
     }
 
@@ -67,17 +66,17 @@ body {
 
 // IMAGE La palette du goût
 .resto-image {
-    width: 100%;
-    height: 275px;
     object-fit: cover;
     display: block;
+    width: 100%;
+    height: 275px;
 }
 // end IMAGE La palette du goût
 
 // MENU block
 .menu-container {
     align-items: center;
-    background-color: var(--color-nine);
+    background-color: $nine;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
     margin-top: -55px;
@@ -86,6 +85,7 @@ body {
     .resto-name-like {
         display: flex;
         justify-content: space-between;
+        align-items: end;
         width: 349px;
         padding-top: 31px;
         padding-left: 20px;
@@ -99,22 +99,22 @@ body {
         }
 
         .fa-heart {
+            padding-bottom: 10px;
             font-size: x-large;
             padding-right: 30px;
             padding-top: 5px;
         }
-
     }
 
     .segment-title {
-        color: black; 
+        color: $thirteen; 
         position: relative;
         font-weight: 300;
         font-size: 16px;
         margin: 0;
         padding-left: 13px;
-        padding-top: 35px;
-        margin-bottom: 25px;
+        padding-top: 40px;
+        margin-bottom: 20px;
       
         &::after {
             content: "";
@@ -123,7 +123,7 @@ body {
             height: 3px; 
             bottom: -9px;
             left: 13px;
-            background-color: #99E2D0; 
+            background-color: $two; 
             }
       }
 
@@ -136,7 +136,7 @@ body {
         .segment-btn {
             width: 349px;
             height: 70px;
-            background-color: var(--color-ten);
+            background-color: $ten;
             border-radius: 15px;
             border: none;
             display: flex;
@@ -178,7 +178,7 @@ body {
 
     .order-btn {
         margin: 39px 94px 39px 94px;
-        background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
+        background: linear-gradient(180deg, $eleven -20%, $six 100%);
         width: 186px;
         height: 50px;
         border: none;
@@ -195,7 +195,7 @@ body {
             font-weight: 500;
             text-decoration: none;
             font-size: 16px;
-            color: var(--color-ten);
+            color: $ten;
         }
     }
 
@@ -204,7 +204,7 @@ body {
 
 //FOOTER block
 footer {
-    background-color: var(--color-eight);
+    background-color: $eight;
     height: 134px;
     padding: 26px 0 26px 26px;
 
@@ -229,19 +229,19 @@ footer {
         .fa-utensils {
             margin-right: 10px;
             font-size: 14px;
-            color: var(--color-ten);
+            color: $ten;
         }
 
         .fa-handshake-angle {
             margin-right: 10px;
             font-size: 11px;
-            color: var(--color-ten);
+            color: $ten;
         }
 
         .footer-description {
             margin: 0;
             font-size: 16px;
-            color: var(--color-ten);
+            color: $ten;
             font-weight: 400;
         }
     }
@@ -252,7 +252,7 @@ footer {
         margin-bottom: 7px;
         font-size: 16px;
         font-weight: 300;
-        color: var(--color-ten);
+        color: $ten;
     }
 }
 // end FOOTER block

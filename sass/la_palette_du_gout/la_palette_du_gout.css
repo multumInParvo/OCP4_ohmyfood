@@ -3,22 +3,8 @@
   font-family: "Roboto";
 }
 
-:root {
-  --color-one: #F3F3F3;
-  --color-two: #99E2D0;
-  --color-three: #008766;
-  --color-four: #89C8FA;
-  --color-five: #003A68;
-  --color-six: #9356DC;
-  --color-seven: #EAEAEA;
-  --color-eight: #353535;
-  --color-nine: #F6F6F6;
-  --color-ten: #FFFFFF;
-  --color-eleven: #FF79DA;
-  --color-twelve: #7E7E7E;
-  --color-thirteen: #000000;
-}
-
+/* var colors */
+/* end var colors */
 body {
   margin: 0;
   display: flex;
@@ -43,7 +29,7 @@ body {
 }
 .main-header .arrow-container .fa-arrow-left {
   font-size: 22px;
-  color: var(--color-eight);
+  color: #353535;
 }
 .main-header .logo-container {
   width: 197px;
@@ -59,16 +45,16 @@ body {
 }
 
 .resto-image {
-  width: 100%;
-  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  width: 100%;
+  height: 275px;
 }
 
 .menu-container {
   align-items: center;
-  background-color: var(--color-nine);
+  background-color: #F6F6F6;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
   margin-top: -55px;
@@ -77,6 +63,7 @@ body {
 .menu-container .resto-name-like {
   display: flex;
   justify-content: space-between;
+  align-items: end;
   width: 349px;
   padding-top: 31px;
   padding-left: 20px;
@@ -89,19 +76,20 @@ body {
   margin: 0;
 }
 .menu-container .resto-name-like .fa-heart {
+  padding-bottom: 10px;
   font-size: x-large;
   padding-right: 30px;
   padding-top: 5px;
 }
 .menu-container .segment-title {
-  color: black;
+  color: #000000;
   position: relative;
   font-weight: 300;
   font-size: 16px;
   margin: 0;
   padding-left: 13px;
-  padding-top: 35px;
-  margin-bottom: 25px;
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
 .menu-container .segment-title::after {
   content: "";
@@ -121,7 +109,7 @@ body {
 .menu-container .segment-menu .segment-btn {
   width: 349px;
   height: 70px;
-  background-color: var(--color-ten);
+  background-color: #FFFFFF;
   border-radius: 15px;
   border: none;
   display: flex;
@@ -157,7 +145,7 @@ body {
 }
 .menu-container .order-btn {
   margin: 39px 94px 39px 94px;
-  background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
+  background: linear-gradient(180deg, #FF79DA -20%, #9356DC 100%);
   width: 186px;
   height: 50px;
   border: none;
@@ -173,11 +161,11 @@ body {
   font-weight: 500;
   text-decoration: none;
   font-size: 16px;
-  color: var(--color-ten);
+  color: #FFFFFF;
 }
 
 footer {
-  background-color: var(--color-eight);
+  background-color: #353535;
   height: 134px;
   padding: 26px 0 26px 26px;
 }
@@ -200,17 +188,17 @@ footer .footer-icon-description {
 footer .footer-icon-description .fa-utensils {
   margin-right: 10px;
   font-size: 14px;
-  color: var(--color-ten);
+  color: #FFFFFF;
 }
 footer .footer-icon-description .fa-handshake-angle {
   margin-right: 10px;
   font-size: 11px;
-  color: var(--color-ten);
+  color: #FFFFFF;
 }
 footer .footer-icon-description .footer-description {
   margin: 0;
   font-size: 16px;
-  color: var(--color-ten);
+  color: #FFFFFF;
   font-weight: 400;
 }
 footer .footer-text-description {
@@ -219,5 +207,5 @@ footer .footer-text-description {
   margin-bottom: 7px;
   font-size: 16px;
   font-weight: 300;
-  color: var(--color-ten);
+  color: #FFFFFF;
 }/*# sourceMappingURL=la_palette_du_gout.css.map */
