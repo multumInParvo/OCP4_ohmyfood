@@ -4,21 +4,21 @@
     font-family: 'Roboto';
 } 
 
-:root {
-    --color-one: #F3F3F3;
-    --color-two: #99E2D0;
-    --color-three: #008766;
-    --color-four: #89C8FA;
-    --color-five: #003A68;
-    --color-six: #9356DC;
-    --color-seven: #EAEAEA;
-    --color-eight: #353535;
-    --color-nine: #F6F6F6;
-    --color-ten: #FFFFFF;
-    --color-eleven: #FF79DA;
-    --color-twelve: #7E7E7E;
-    --color-thirteen: #000000;
-}
+/* var colors */ 
+$one: #F3F3F3;
+$two: #99E2D0;
+$three: #008766;
+$four: #89C8FA;
+$five: #003A68;
+$six: #9356DC;
+$seven: #EAEAEA;
+$eight: #353535;
+$nine: #F6F6F6;
+$ten: #FFFFFF;
+$eleven: #FF79DA;
+$twelve: #7E7E7E;
+$thirteen: #000000;
+/* end var colors */ 
 
 body {
     margin: 0;
@@ -65,15 +65,15 @@ body {
     gap: 17px;
     width: 100%;
     height: 50px;
-    background-color: var(--color-seven);
+    background-color: $seven;
 
     .fa-location-dot {
-        color: var(--color-eight);
+        color: $eight;
     }
     
     .location-description {
         margin: 0;
-        color: var(--color-eight);
+        color: $eight;
     }
 }
 /* end LOCATION block */
@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-nine);
+    background-color: $nine;
 
     .reservation-title {
         margin-top: 39px;
@@ -97,14 +97,14 @@ body {
         margin-top: 0;
         margin-bottom: 27px;
         font-size: 18px;
-        color: var(--color-eight);
+        color: $eight;
         display: flex;
         text-align: center;
     }
 
     .explore-btn {
         margin-bottom: 60px;
-        background: linear-gradient(180deg, var(--color-eleven) -20%, var(--color-six) 100%);
+        background: linear-gradient(180deg, $eleven -20%, $six 100%);
         width: 218px;
         height: 50px;
         border: none;
@@ -121,7 +121,7 @@ body {
             font-weight: 500;
             text-decoration: none;
             font-size: 16px;
-            color: var(--color-ten);
+            color: $ten;
         }
     }
 }
@@ -146,7 +146,8 @@ body {
         gap: 25px;
 
         .functioning-btn {
-            background-color: var(--color-nine);
+            padding: 0;
+            background-color: $nine;
             border-radius: 20px;
             border: none;
             display: flex;
@@ -160,14 +161,14 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: var(--color-six);
+                background-color: $six;
                 width: 24px;
                 height: 24px;
                 border-radius: 12px;
                 margin-left: -12px;
 
                 .number-circle {
-                    color: #FFFFFF;
+                    color: $ten;
                     margin: 0;
                 }
             }
@@ -175,7 +176,7 @@ body {
             .fa-mobile-screen-button,
             .fa-list-ul,
             .fa-store {
-                color: var(--color-twelve);
+                color: $twelve;
                 margin: 0 24px;
                 font-size: 18px;
             }
@@ -193,7 +194,7 @@ body {
 
 /* RESTAURANTS block */
 .restaurants-main {
-    background-color: var(--color-nine);
+    background-color: $nine;
     width: 100%;
     padding-bottom: 49px;
 
@@ -220,7 +221,7 @@ body {
                     position: absolute;
                     width: 80px;
                     height: 29px;
-                    background-color: var(--color-two);
+                    background-color: $two;
                     top: 13px;
                     right: 13px;
                     border-radius: 2px;
@@ -231,7 +232,7 @@ body {
                         justify-content: center;
                         align-items: center;
                         font-size: 14px;
-                        color: var(--color-three);
+                        color: $three;
                     }
                 }
 
@@ -239,44 +240,47 @@ body {
                     border-radius: 15px 15px 0 0;
                     width: 100%;
                     height: 175px;
-                    object-fit: cover;
-                    display: block;
+                    display: block; 
+                    object-fit: cover;               
                 }
 
                 .resto-description {
                     border-radius: 0 0 15px 15px;
-                    background-color: var(--color-ten);
+                    background-color: $ten;
                     padding-left: 14px;
                     height: 76px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
 
-                    .resto-name {
-                        padding-top: 12px;
-                        margin: 0;
-                        font-size: 18px;
-                        font-weight: 700;
-                        color: var(--color-thirteen);
-                        width: 150px;
+                    .resto-name-location {
+                        width: auto;
+
+                        .resto-name {
+                            padding-top: 15px;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: $thirteen;
+                        }
+    
+                        .resto-location {
+                            padding-top: 3px;
+                            margin: 0;
+                            font-size: 17px;
+                            font-weight: 300;
+                            color: $thirteen;
+                        } 
                     }
 
-                    .resto-location {
-                        padding-top: 5px;
-                        margin: 0;
-                        font-size: 17px;
-                        font-weight: 300;
-                        color: var(--color-thirteen);
-                        width: 150px;
-                    }     
-                    
                     /* heart fill */ 
-
                     .fa-heart {
-                        font-size: x-large;
                         display: flex;
-                        justify-content: end;
-                        color: var(--color-thirteen);
-                        
+                        align-items: center;
+                        padding-right: 25px;
+                        font-size: x-large;
+                        color: $thirteen;                        
                     }
-
                     /* end heart fill */
                 }
             }
@@ -287,7 +291,7 @@ body {
 
 /* FOOTER block */
 footer {
-    background-color: var(--color-eight);
+    background-color: $eight;
     height: 134px;
     padding: 26px 0 26px 26px;
 
@@ -312,19 +316,19 @@ footer {
         .fa-utensils {
             margin-right: 10px;
             font-size: 14px;
-            color: var(--color-ten);
+            color: $ten;
         }
 
         .fa-handshake-angle {
             margin-right: 10px;
             font-size: 11px;
-            color: var(--color-ten);
+            color: $ten;
         }
 
         .footer-description {
             margin: 0;
             font-size: 16px;
-            color: var(--color-ten);
+            color: $ten;
             font-weight: 400;
         }
     }
@@ -335,7 +339,7 @@ footer {
         margin-bottom: 7px;
         font-size: 16px;
         font-weight: 300;
-        color: var(--color-ten);
+        color: $ten;
     }
 }
 /* end FOOTER block */
