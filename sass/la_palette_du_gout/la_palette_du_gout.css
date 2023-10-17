@@ -59,6 +59,8 @@ body {
   border-top-right-radius: 45px;
   margin-top: -55px;
   position: relative;
+  /* commander button */
+  /* end commander button */
 }
 .menu-container .resto-name-like {
   display: flex;
@@ -68,6 +70,8 @@ body {
   padding-top: 31px;
   padding-left: 20px;
   margin-bottom: -10px;
+  /* like heart */
+  /* end like heart */
 }
 .menu-container .resto-name-like .resto-name {
   font-family: "Shrikhand";
@@ -75,11 +79,31 @@ body {
   font-size: 28px;
   margin: 0;
 }
-.menu-container .resto-name-like .fa-heart {
-  padding-bottom: 10px;
-  font-size: x-large;
+.menu-container .resto-name-like .heart-container {
+  display: flex;
+  align-self: center;
   padding-right: 30px;
-  padding-top: 5px;
+}
+.menu-container .resto-name-like .heart-container .heart-trigger .fa-heart {
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu-container .resto-name-like .heart-container .heart-trigger .fa-regular.fa-heart {
+  position: absolute;
+}
+.menu-container .resto-name-like .heart-container .heart-trigger .fa-solid.fa-heart {
+  background: linear-gradient(180deg, #9356DC -20%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+.menu-container .resto-name-like .heart-container #like-heart:checked ~ .heart-trigger .fa-solid.fa-heart {
+  opacity: 1;
+}
+.menu-container .resto-name-like .heart-container #like-heart {
+  display: none;
 }
 .menu-container .segment-title {
   color: #000000;
@@ -105,20 +129,26 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 11px;
+  /* buttons menu */
 }
 .menu-container .segment-menu .segment-btn {
   width: 349px;
   height: 70px;
-  background-color: #FFFFFF;
-  border-radius: 15px;
+  background: none;
   border: none;
-  display: flex;
+  padding: 0;
+  overflow: hidden;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.menu-container .segment-menu .segment-btn .segment-btn-trigger {
+  background-color: #FFFFFF;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  cursor: pointer;
 }
-.menu-container .segment-menu .segment-btn .dish-name-description {
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description {
   display: flex;
   align-items: start;
   padding-left: 15px;
@@ -126,22 +156,78 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.menu-container .segment-menu .segment-btn .dish-name-description .dish-name {
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description .dish-name {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
-.menu-container .segment-menu .segment-btn .dish-name-description .dish-description {
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description .dish-description {
   font-size: 15px;
   font-weight: 300;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu-container .segment-menu .segment-btn .dish-detail {
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price {
+  margin-right: -61px;
+  display: flex;
+  width: 101px;
+  height: 70px;
+  transition: transform 250ms ease-in;
+}
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .dish-detail {
+  display: flex;
+  align-items: center;
   padding-top: 30px;
   padding-right: 15px;
   font-size: 15px;
   font-weight: 700;
   margin: 0;
+}
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 60px;
+  height: 70px;
+  border-radius: 0 20% 20% 0;
+}
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider .checkmark-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider .checkmark-circle .fa-solid {
+  color: #99E2D0;
+  font-size: 14px;
+}
+.menu-container .segment-menu .segment-btn #starter-one:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-two:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-three:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-four:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-five:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-six:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-seven:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-eight:checked ~ .segment-btn-trigger .slider-price,
+.menu-container .segment-menu .segment-btn #starter-nine:checked ~ .segment-btn-trigger .slider-price {
+  transform: translateX(-60px);
+}
+.menu-container .segment-menu .segment-btn #starter-one,
+.menu-container .segment-menu .segment-btn #starter-two,
+.menu-container .segment-menu .segment-btn #starter-three,
+.menu-container .segment-menu .segment-btn #starter-four,
+.menu-container .segment-menu .segment-btn #starter-five,
+.menu-container .segment-menu .segment-btn #starter-six,
+.menu-container .segment-menu .segment-btn #starter-seven,
+.menu-container .segment-menu .segment-btn #starter-eight,
+.menu-container .segment-menu .segment-btn #starter-nine {
+  display: none;
 }
 .menu-container .order-btn {
   margin: 39px 94px 39px 94px;

@@ -3,6 +3,7 @@
     font-family: 'Shrikhand' sans-serif;
     font-family: 'Roboto';
 } 
+
 /* var colors */ 
     $one: #F3F3F3;
     $two: #99E2D0;
@@ -97,13 +98,46 @@ body {
             font-size: 28px;
             margin: 0;
         }
+        /* like heart */ 
 
-        .fa-heart {
-            padding-bottom: 10px;
-            font-size: x-large;
+        .heart-container {
+            display: flex;
+            align-self: center;
             padding-right: 30px;
-            padding-top: 5px;
+
+            .heart-trigger {
+
+            
+
+                .fa-heart {
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+
+                .fa-regular.fa-heart {
+                    position: absolute;
+                }
+
+                .fa-solid.fa-heart {
+                    background: linear-gradient(180deg, $six -20%, $eleven 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    position: relative;
+                    opacity: 0;
+                    transition: all 500ms ease-in;
+                }
+            }
+
+            #like-heart:checked ~ .heart-trigger .fa-solid.fa-heart {
+                opacity: 1;
+            }
+
+            #like-heart {
+                display: none;
+            }
         }
+          
+        /* end like heart */ 
     }
 
     .segment-title {
@@ -133,49 +167,120 @@ body {
         align-items: center;
         gap: 11px;
         
+        /* buttons menu */
+
         .segment-btn {
             width: 349px;
             height: 70px;
-            background-color: $ten;
-            border-radius: 15px;
+            background: none;
             border: none;
-            display: flex;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-            justify-content: space-between;
-            align-items: center;
             padding: 0;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
 
-            .dish-name-description {
-                display: flex;
-                align-items: start;
-                padding-left: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-
-                .dish-name {
-                    font-size: 18px;
-                    font-weight: 500;
-                    margin: 0;
+            .segment-btn-trigger {  
+                background-color: $ten; 
+                display: flex;            
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+            
+                .dish-name-description {
+                    display: flex;
+                    align-items: start;
+                    padding-left: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+            
+                    .dish-name {
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+            
+                    .dish-description {
+                        font-size: 15px;
+                        font-weight: 300;
+                        margin: 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
                 }
-
-                .dish-description {
-                    font-size: 15px;
-                    font-weight: 300;
-                    margin: 0;
+            
+                .slider-price {
+                    margin-right: -61px;
+                    display: flex;
+                    width: 101px;
+                    height: 70px;
+                    transition: transform 250ms ease-in;
+            
+                    .dish-detail {
+                        display: flex;
+                        align-items: center;
+                        padding-top: 30px;
+                        padding-right: 15px;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+            
+                    .slider {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $two;
+                        width: 60px;
+                        height: 70px;
+                        border-radius: 0 20% 20% 0;
+            
+                            .checkmark-circle {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 20px;
+                            height: 20px;
+                            background-color: $ten;
+                            border-radius: 50%;
+                    
+                            .fa-solid {
+                                color: $two;
+                                font-size: 14px;
+                            }
+                        }
+                    }
                 }
             }
-
-            .dish-detail {
-                padding-top: 30px;
-                padding-right: 15px;
-                font-size: 15px;
-                font-weight: 700;
-                margin: 0
+            
+            #starter-one:checked ~ .segment-btn-trigger .slider-price, 
+            #starter-two:checked ~ .segment-btn-trigger .slider-price, 
+            #starter-three:checked ~ .segment-btn-trigger .slider-price,
+            #starter-four:checked ~ .segment-btn-trigger .slider-price,
+            #starter-five:checked ~ .segment-btn-trigger .slider-price,
+            #starter-six:checked ~ .segment-btn-trigger .slider-price,
+            #starter-seven:checked ~ .segment-btn-trigger .slider-price,
+            #starter-eight:checked ~ .segment-btn-trigger .slider-price,
+            #starter-nine:checked ~ .segment-btn-trigger .slider-price {
+                transform: translateX(-60px);
             }
-        }
+            
+            #starter-one, 
+            #starter-two, 
+            #starter-three,
+            #starter-four,
+            #starter-five,
+            #starter-six,
+            #starter-seven,
+            #starter-eight,
+            #starter-nine {
+                display: none;
+            }           
+        }    
     }
 
+    /* commander button */
     .order-btn {
         margin: 39px 94px 39px 94px;
         background: linear-gradient(180deg, $eleven -20%, $six 100%);
@@ -198,7 +303,7 @@ body {
             color: $ten;
         }
     }
-
+    /* end commander button */
 }    
 // end MENU block
 
