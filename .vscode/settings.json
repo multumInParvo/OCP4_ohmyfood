@@ -1,3 +1,5 @@
 {
     "liveSassCompile.settings.showOutputWindowOn": "None"
 }
+
+/* Configuration setting for (VSCode) editor, specifically related to the "Live Sass Compiler" extension */
