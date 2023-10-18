@@ -251,8 +251,7 @@ body {
 /* FOOTER block */
 footer {
   background-color: #353535;
-  height: 134px;
-  padding: 26px 0 26px 26px;
+  padding: 20px 26px 26px 26px;
 }
 footer .footer-logo {
   display: flex;
@@ -264,29 +263,29 @@ footer .footer-logo .footer-logo-image {
   height: 18px;
   margin-bottom: 20px;
 }
-footer .footer-icon-description {
+footer .footer-icon-description-text .footer-icon-description {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 7px;
 }
-footer .footer-icon-description .fa-utensils {
+footer .footer-icon-description-text .footer-icon-description .fa-utensils {
   margin-right: 10px;
   font-size: 14px;
   color: #FFFFFF;
 }
-footer .footer-icon-description .fa-handshake-angle {
+footer .footer-icon-description-text .footer-icon-description .fa-handshake-angle {
   margin-right: 10px;
   font-size: 11px;
   color: #FFFFFF;
 }
-footer .footer-icon-description .footer-description {
+footer .footer-icon-description-text .footer-icon-description .footer-description {
   margin: 0;
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 400;
 }
-footer .footer-text-description {
+footer .footer-icon-description-text .footer-text-info .footer-text-description {
   margin: 0;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -296,4 +295,111 @@ footer .footer-text-description {
 }
 
 /* end FOOTER block */
-/* tablet and desktop (equal or more than 768px) *//*# sourceMappingURL=styles.css.map */
+/* tablet and desktop (equal or more than 768px) */
+@media (min-width: 768px) {
+  /* HEADER block */
+  .main-header {
+    height: 96px;
+  }
+  .main-header .logo-container .logo-image {
+    width: 200px;
+    height: 34.2px;
+  }
+  /* end HEADER block */
+  /* RESERVATION block */
+  .reservation-container {
+    padding: 30px 0 30px 0;
+    gap: 30px;
+  }
+  .reservation-container .reservation-title {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+  }
+  .reservation-container .reservation-description {
+    padding: 0;
+    margin: 0;
+  }
+  .reservation-container .explore-btn {
+    margin: 0;
+    padding: 0;
+  }
+  /* end RESERVATION block */
+  /* FUNCTIONING block */
+  .functioning-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    padding: 50px 0;
+  }
+  .functioning-container .functioning-title {
+    margin: 0;
+    margin-left: 195px;
+  }
+  .functioning-container .functioning-btns-group {
+    gap: 35px;
+  }
+  /* end FUNCTIONING block */
+  /* RESTAURANTS block */
+  .restaurants-main {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  .restaurants-main .restaurants-title {
+    margin: 0;
+    padding: 29px 0;
+  }
+  .restaurants-main .restos-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    padding: 0 17.5px;
+  }
+  .restaurants-main .restos-cards-container .resto-card-link {
+    width: 490px;
+    height: 251px;
+  }
+  /* end RESTAURANTS block */
+  /* FOOTER block */
+  footer {
+    padding: 65px 30px 30px 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .footer-logo {
+    width: 137px;
+    padding-left: 90px;
+  }
+  footer .footer-logo .footer-logo-image {
+    margin: 0;
+  }
+  footer .footer-icon-description-text {
+    display: flex;
+  }
+  footer .footer-icon-description-text .footer-icon-description {
+    margin: 0;
+  }
+  footer .footer-icon-description-text .footer-icon-description .footer-description {
+    margin: 0;
+  }
+  footer .footer-icon-description-text .footer-icon-description .fa-utensils,
+  footer .footer-icon-description-text .footer-icon-description .fa-handshake-angle {
+    margin: 0 10px;
+  }
+  footer .footer-icon-description-text .footer-text-info {
+    padding-left: 40px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  footer .footer-icon-description-text .footer-text-info .footer-text-description {
+    margin: 0;
+  }
+  /* end FOOTER block */
+}/*# sourceMappingURL=styles.css.map */
