@@ -127,7 +127,7 @@ body {
                     }
                 }
 
-                #like-heart:checked ~ .heart-trigger .fa-solid.fa-heart {
+                #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
                     opacity: 1;
                 }
 
@@ -476,7 +476,6 @@ footer {
                 }
             }
         }    
-
         /* end FOOTER block */
     }
 }
