@@ -272,17 +272,48 @@ body {
                             color: $thirteen;
                         } 
                     }
-
-                    /* heart fill */ 
-                    
-                    .fa-heart {
+                    /* like heart */ 
+                    .heart-container {
                         display: flex;
-                        align-items: center;
-                        padding-right: 25px;
-                        font-size: x-large;
-                        color: $thirteen;                        
-                    }
-                    /* end heart fill */
+                        align-self: center;
+
+                        .heart-trigger {
+                            .fa-heart {
+                                padding-right: 25px;
+                                font-size: 24px;
+                                cursor: pointer;
+                            }
+
+                            .fa-regular.fa-heart {
+                                color: $thirteen;
+                                position: absolute;
+                            }
+
+                            .fa-solid.fa-heart {
+                                background: linear-gradient(180deg, $six -20%, $eleven 100%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                position: relative;
+                                opacity: 0;
+                                transition: all 500ms ease-in;
+                            }
+                        }
+
+                        #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
+                        #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
+                        #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
+                        #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
+                            opacity: 1;
+                        }
+
+                        #like-heart-one,
+                        #like-heart-two,
+                        #like-heart-three,
+                        #like-heart-four {
+                            display: none;
+                        }
+                    }            
+                    /* end like heart */ 
                 }
             }
         }

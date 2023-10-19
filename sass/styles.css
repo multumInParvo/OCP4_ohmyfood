@@ -219,8 +219,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* heart fill */
-  /* end heart fill */
+  /* like heart */
+  /* end like heart */
 }
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .resto-name-location {
   width: auto;
@@ -239,12 +239,38 @@ body {
   font-weight: 300;
   color: #000000;
 }
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .fa-heart {
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container {
   display: flex;
-  align-items: center;
+  align-self: center;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container .heart-trigger .fa-heart {
   padding-right: 25px;
-  font-size: x-large;
+  font-size: 24px;
+  cursor: pointer;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container .heart-trigger .fa-regular.fa-heart {
   color: #000000;
+  position: absolute;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container .heart-trigger .fa-solid.fa-heart {
+  background: linear-gradient(180deg, #9356DC -20%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
+  opacity: 1;
+}
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-one,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-two,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-three,
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-four {
+  display: none;
 }
 
 /* end RESTAURANTS block */
