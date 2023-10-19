@@ -107,16 +107,28 @@ body {
 .menu-container .resto-title-container .resto-name-like .heart-container #like-heart {
   display: none;
 }
-.menu-container .segment-title {
+.menu-container .segment-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  /* buttons menu */
+}
+.menu-container .segment-menu .segment-title-container {
+  width: 100%;
+  max-width: 634px;
+  display: flex;
+}
+.menu-container .segment-menu .segment-title-container .segment-title {
   color: #000000;
   position: relative;
   font-weight: 300;
   font-size: 16px;
   margin: 0;
+  margin-bottom: 10px;
   padding-top: 37px;
-  margin-bottom: 20px;
 }
-.menu-container .segment-title::after {
+.menu-container .segment-menu .segment-title-container .segment-title::after {
   content: "";
   position: absolute;
   width: 40px;
@@ -124,13 +136,6 @@ body {
   bottom: -9px;
   left: 0;
   background-color: #99E2D0;
-}
-.menu-container .segment-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 11px;
-  /* buttons menu */
 }
 .menu-container .segment-menu .segment-btn {
   position: relative;
@@ -335,9 +340,6 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   }
   .main-container .menu-container .resto-name-like {
     padding: 0;
-  }
-  .main-container .menu-container .resto-name-like .resto-name {
-    font-size: 28px;
   }
   .main-container footer {
     width: 100%;
