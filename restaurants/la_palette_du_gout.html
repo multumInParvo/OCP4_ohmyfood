@@ -17,16 +17,18 @@
     <script src="https://kit.fontawesome.com/86d5534056.js" crossorigin="anonymous"></script>
   </head>
 
-   <body>
+  <body>
     <div class="main-container">
       <!-- HEADER block-->
       <header class="main-header">
+        <div class="header-components">
           <a href="/index.html" class="arrow-container">
             <i class="fa-solid fa-arrow-left"></i>
           </a>
           <div class="logo-container">
             <img class="logo-image" src="/assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
           </div>
+        </div>  
       </header>
       <!-- end HEADER block -->
 
@@ -37,10 +39,10 @@
       <!-- MENU block -->
       <section class="menu-container">
 
-         <div class="resto-name-like">
+        <div class="resto-title-container">
+          <div class="resto-name-like">
             <h1 class="resto-name">La palette du goût</h1>
             <!-- icon heart -->
-
             <div class="heart-container">
               <input type="checkbox" id="like-heart">
               <label for="like-heart" class="heart-trigger">
@@ -48,207 +50,212 @@
                 <i class="fa-solid fa-heart"></i>
               </label>
             </div>
-
             <!-- end icon heart -->
+          </div>
         </div>
-                <!-- starters menu -->
+            <!-- starters menu -->
 
-            <h2 class="segment-title">ENTRÉES</h2>
+        <h2 class="segment-title">ENTRÉES</h2>
 
-            <div class="segment-menu">
+        <article class="segment-menu">
 
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-one">
-                <label for="starter-one" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Fricassée d'escargots</h3>
-                    <p class="dish-description">Au piment d'Espelette</p>
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-one">
+            <label for="starter-one" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Fricassée d'escargots</h3>
+                <p class="dish-description">Au piment d'Espelette</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">25€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
                   </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">25€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button> 
+                </div>
+              </div>
+            </label>
+          </button> 
 
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-two">
-                <label for="starter-two" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Foie gras de canard mi-cuit</h3>
-                    <p class="dish-description">Et ses copeaux de truffe noire</p>
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-two">
+            <label for="starter-two" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Foie gras de canard mi-cuit</h3>
+                <p class="dish-description">Et ses copeaux de truffe noire</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">35€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
                   </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">35€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-three" class="hidden-checkbox">
+            <label for="starter-three" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Œuf au plat</h3>
+                <p class="dish-description">Assaisonné à la truffe sur lit de caviar</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">20€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
                   </div>
-                </label>
+                </div>
+              </div>
+            </label>
+          </button>
+
+        </article>
+              <!-- end starters menu -->
+
+              <!-- main courses menu -->
+        <h2 class="segment-title">PLATS</h2>
+
+        <article class="segment-menu">
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-four" class="hidden-checkbox">
+            <label for="starter-four" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Filet de bœuf aux herbes</h3>
+                <p class="dish-description">Accompagné de sa ribambelle de légumes</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">40€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-five" class="hidden-checkbox">
+            <label for="starter-five" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Parmentier de queue de bœuf</h3>
+                <p class="dish-description">À la truffe noire sur sa purée de panais</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">35€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-six" class="hidden-checkbox">
+            <label for="starter-six" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Filet de turbot</h3>
+                <p class="dish-description">Aux agrumes</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">44€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+        </article>
+              <!-- end main courses menu -->
+
+              <!-- desserts menu -->
+        <h2 class="segment-title">DESSERTS</h2>
+
+        <article class="segment-menu">
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-seven" class="hidden-checkbox">
+            <label for="starter-seven" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Paris-Brest</h3>
+                <p class="dish-description">Revisité</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">18€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-eight" class="hidden-checkbox">
+            <label for="starter-eight" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Macaron au chocolat d'exception </h3>
+                <p class="dish-description">Et glace à la vanille de Madagascar</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">22€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+          <button class="segment-btn">
+            <input type="checkbox" id="starter-nine" class="hidden-checkbox">
+            <label for="starter-nine" class="segment-btn-trigger">
+              <div class="dish-name-description">
+                <h3 class="dish-name">Mousse au chocolat </h3>
+                <p class="dish-description">Au piment d'Espelette et à la truffe noire</p>
+              </div>
+              <div class="slider-price">
+                <p class="dish-detail">23€</p>
+                <div class="slider">
+                  <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </button>
+
+        </article>
+            <!-- end desserts menu -->
+            <!-- commander button -->
+            <div class="container-order-btn">
+              <button class="order-btn">
+                <a class="order-btn-description" href="#">Commander</a>
               </button>
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-three" class="hidden-checkbox">
-                <label for="starter-three" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Œuf au plat</h3>
-                    <p class="dish-description">Assaisonné à la truffe sur lit de caviar</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">20€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
             </div>
-                 <!-- end starters menu -->
-
-                 <!-- main courses menu -->
-            <h2 class="segment-title">PLATS</h2>
-
-            <div class="segment-menu">
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-four" class="hidden-checkbox">
-                <label for="starter-four" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Filet de bœuf aux herbes</h3>
-                    <p class="dish-description">Accompagné de sa ribambelle de légumes</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">40€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-five" class="hidden-checkbox">
-                <label for="starter-five" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Parmentier de queue de bœuf</h3>
-                    <p class="dish-description">À la truffe noire sur sa purée de panais</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">35€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-six" class="hidden-checkbox">
-                <label for="starter-six" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Filet de turbot</h3>
-                    <p class="dish-description">Aux agrumes</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">44€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-            </div>
-                 <!-- end main courses menu -->
-
-                 <!-- desserts menu -->
-            <h2 class="segment-title">DESSERTS</h2>
-
-            <div class="segment-menu">
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-seven" class="hidden-checkbox">
-                <label for="starter-seven" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Paris-Brest</h3>
-                    <p class="dish-description">Revisité</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">18€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-eight" class="hidden-checkbox">
-                <label for="starter-eight" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Macaron au chocolat d'exception </h3>
-                    <p class="dish-description">Et glace à la vanille de Madagascar</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">22€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
-              <button class="segment-btn">
-                <input type="checkbox" id="starter-nine" class="hidden-checkbox">
-                <label for="starter-nine" class="segment-btn-trigger">
-                  <div class="dish-name-description">
-                    <h3 class="dish-name">Mousse au chocolat </h3>
-                    <p class="dish-description">Au piment d'Espelette et à la truffe noire</p>
-                  </div>
-                  <div class="slider-price">
-                    <p class="dish-detail">23€</p>
-                    <div class="slider">
-                      <div class="checkmark-circle">
-                        <i class="fa-solid fa-check"></i>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-              </button>
-
-            </div>
-                 <!-- end desserts menu -->
-            <button class="order-btn">
-              <a class="order-btn-description" href="#">Commander</a>
-            </button>
-
+            <!-- end commander button -->
       </section>
       <!-- end MENU block -->
-
+    
       <!-- FOOTER block -->
       <footer>
 
         <article class="footer-logo">
           <img class="footer-logo-image" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </article>
+
+        <div class="footer-icon-description-text">
 
           <div class="footer-icon-description">
             <i class="fa-solid fa-utensils"></i>
@@ -260,12 +267,15 @@
             <p class="footer-description">Devenir partenaire</p>
           </div>  
 
-          <p class="footer-text-description">Mentions légales</p>
-          <p class="footer-text-description">Contact</p>
-        
+          <div class="footer-text-info">
+            <p class="footer-text-description">Mentions légales</p>
+            <p class="footer-text-description">Contact</p>
+          </div>
+          
+        </div>
       </footer>
-    <!-- end FOOTER block-->
-  </div>
+      <!-- end FOOTER block-->
+    </div>
   </body>
 
 </html>
