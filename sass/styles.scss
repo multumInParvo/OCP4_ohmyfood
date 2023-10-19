@@ -354,22 +354,21 @@ footer {
 /* tablet and desktop (equal or more than 768px) */
 @media (min-width: 768px) {
 
-/* HEADER block */
+    /* HEADER block */
 
     .main-header {
         height: 96px;
 
         .logo-container {
-
             .logo-image {
                 width: 200px;
-                height: 34.2px;
+                height: 34px;
             }
         }
     }
-/* end HEADER block */
+    /* end HEADER block */
 
-/* RESERVATION block */
+    /* RESERVATION block */
 
     .reservation-container {
         padding: 30px 0 30px 0;
@@ -392,9 +391,9 @@ footer {
         }
     }
 
-/* end RESERVATION block */
+    /* end RESERVATION block */
 
-/* FUNCTIONING block */
+    /* FUNCTIONING block */
 
     .functioning-container {
         margin: 0;
@@ -413,9 +412,9 @@ footer {
         }
     }
 
-/* end FUNCTIONING block */
+    /* end FUNCTIONING block */
 
-/* RESTAURANTS block */
+    /* RESTAURANTS block */
 
     .restaurants-main {
         flex-direction: column;
@@ -441,53 +440,53 @@ footer {
             }
         }
     }
-/* end RESTAURANTS block */
+    /* end RESTAURANTS block */
 
-/* FOOTER block */
+    /* FOOTER block */
 
-footer {
-    padding: 65px 30px 30px 0; 
-    display: flex;
-    flex-direction: row-reverse;
-    
-    .footer-logo {
-        width: 137px;
-        padding-left: 90px;
-
-        .footer-logo-image {
-            margin: 0;
-        }
-    }
-
-    .footer-icon-description-text {
+    footer {
+        padding: 65px 30px 30px 0; 
         display: flex;
+        flex-direction: row-reverse;
+        
+        .footer-logo {
+            width: 137px;
+            padding-left: 90px;
 
-        .footer-icon-description {
-            margin: 0;
-
-            .footer-description {
+            .footer-logo-image {
                 margin: 0;
-            }
-
-            .fa-utensils,
-            .fa-handshake-angle {
-                margin: 0 10px;
             }
         }
 
-        .footer-text-info {
-            padding-left: 40px;
-            gap: 20px;
+        .footer-icon-description-text {
             display: flex;
-            align-items: center;
-            flex-direction: row;
 
-            .footer-text-description {
+            .footer-icon-description {
                 margin: 0;
+
+                .footer-description {
+                    margin: 0;
+                }
+
+                .fa-utensils,
+                .fa-handshake-angle {
+                    margin: 0 10px;
+                }
+            }
+
+            .footer-text-info {
+                padding-left: 40px;
+                gap: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                .footer-text-description {
+                    margin: 0;
+                }
             }
         }
-    }
-}    
+    }    
 
-/* end FOOTER block */
+    /* end FOOTER block */
 }
