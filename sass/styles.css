@@ -8,15 +8,81 @@
 /* end var colors */
 body {
   margin: 0;
+}
+
+.loader {
+  flex-direction: column;
+  position: fixed;
+  background: #353535;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: fader 2500ms forwards;
+  animation-delay: 600ms;
+  gap: 300px;
+}
+.loader .loader-logo {
+  filter: invert(100%);
+  width: 200px;
+  height: 40px;
+}
+.loader .ball-container {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.loader .ball-container .ball-one {
+  width: 15px;
+  height: 15px;
+  background: #99E2D0;
+  border-radius: 50%;
+  animation: bouncer 500ms ease infinite alternate;
+}
+.loader .ball-container .ball-two {
+  width: 20px;
+  height: 20px;
+  background: #9356DC;
+  border-radius: 50%;
+  animation: bouncer 0.5s ease infinite alternate;
+  animation-delay: 0.1s;
+}
+.loader .ball-container .ball-three {
+  width: 25px;
+  height: 25px;
+  background: #FF79DA;
+  border-radius: 50%;
+  animation: bouncer 0.5s ease infinite alternate;
+  animation-delay: 0.2s;
+}
+.loader .ball-container .ball-four {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  animation: bouncer 0.5s ease infinite alternate;
+  animation-delay: 0.2s;
+}
+@keyframes fader {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
 }
 
 .main-container {
   width: 100%;
 }
 
-/* HEADER block */
 .main-header {
   position: relative;
   display: flex;
@@ -38,7 +104,6 @@ body {
   height: 28.09px;
 }
 
-/* end HEADER block */
 /* LOCATION block */
 .location-container {
   display: flex;
@@ -111,8 +176,7 @@ body {
 }
 .functioning-container .functioning-title {
   font-weight: 700;
-  margin-top: 45px;
-  margin-bottom: 35px;
+  margin: 0;
 }
 .functioning-container .functioning-btns-group {
   padding-left: 12px;
@@ -353,18 +417,19 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   /* end RESERVATION block */
   /* FUNCTIONING block */
   .functioning-container {
-    margin: 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 29px;
     padding: 50px 0;
-  }
-  .functioning-container .functioning-title {
     margin: 0;
-    margin-left: 195px;
   }
   .functioning-container .functioning-btns-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 35px;
+    justify-content: center;
   }
   /* end FUNCTIONING block */
   /* RESTAURANTS block */
