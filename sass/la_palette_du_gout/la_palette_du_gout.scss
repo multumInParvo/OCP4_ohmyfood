@@ -171,6 +171,7 @@ body {
                 }
             }
         }
+
         /* buttons menu */
 
         .segment-btn {
@@ -256,6 +257,8 @@ body {
                     }
                 }
             }
+
+            
             
             #starter-one:checked + .segment-btn-trigger .slider-price, 
             #starter-two:checked + .segment-btn-trigger .slider-price, 
@@ -280,8 +283,54 @@ body {
             #starter-nine {
                 display: none;
             }   
-        }    
+        }  
+        
+        // .segment-btn level
+        .segment-btn.starter-one-hidden {
+            animation: appearDishOne 1500ms ease forwards;
+            animation-delay: 200ms;
+        }
+        @keyframes appearDishOne {
+            from  {
+            transform: translateX(100%);
+            }   
+            to  {
+                transform: translateX(0);
+            }   
+        }
+
+
+        .segment-btn.starter-two-hidden {
+            animation: appearTwo 1000ms ease forwards;
+            animation-delay: 200ms;
+        }
+        @keyframes appearTwo {
+            from  {
+            transform: translateX(70%);
+            }   
+            to  {
+                transform: translateX(0);
+            }   
+        }
+
+
+        .segment-btn.starter-three-hidden {
+            animation: appearThree 500ms ease forwards;
+            animation-delay: 200ms;
+        }
+        @keyframes appearThree {
+            from  {
+            transform: translateX(40%);
+            }   
+            to  {
+                transform: translateX(0);
+            }   
+        }
+
+        // .segment-btn level
     }
+
+    
 
     /* commander button */
     .container-order-btn {

@@ -234,6 +234,42 @@ body {
 .menu-container .segment-menu .segment-btn #starter-nine {
   display: none;
 }
+.menu-container .segment-menu .segment-btn.starter-one-hidden {
+  animation: appearDishOne 1500ms ease forwards;
+  animation-delay: 200ms;
+}
+@keyframes appearDishOne {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.menu-container .segment-menu .segment-btn.starter-two-hidden {
+  animation: appearTwo 1000ms ease forwards;
+  animation-delay: 200ms;
+}
+@keyframes appearTwo {
+  from {
+    transform: translateX(70%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.menu-container .segment-menu .segment-btn.starter-three-hidden {
+  animation: appearThree 500ms ease forwards;
+  animation-delay: 200ms;
+}
+@keyframes appearThree {
+  from {
+    transform: translateX(40%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .menu-container .container-order-btn {
   display: flex;
   justify-content: center;
