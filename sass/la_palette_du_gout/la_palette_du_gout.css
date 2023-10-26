@@ -1,5 +1,5 @@
 * {
-  font-family: "Shrikhand" sans-serif;
+  font-family: "Shrikhand", sans-serif;
   font-family: "Roboto";
 }
 
@@ -53,6 +53,7 @@ body {
   height: 275px;
 }
 
+/* MENU block */
 .menu-container {
   padding: 36px 13px 0 13px;
   display: flex;
@@ -97,6 +98,9 @@ body {
   opacity: 0;
   transition: all 500ms ease-in;
 }
+.menu-container .resto-title-container .resto-name-like .heart-container .heart-trigger .fa-solid.fa-heart:hover {
+  opacity: 1;
+}
 .menu-container .resto-title-container .resto-name-like .heart-container #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
   opacity: 1;
 }
@@ -133,85 +137,84 @@ body {
   background-color: #99E2D0;
 }
 .menu-container .segment-menu .segment-btn {
+  cursor: pointer;
+  overflow: hidden;
+  justify-content: space-between;
   position: relative;
+  display: flex;
   width: 100%;
   max-width: 349px;
   height: 70px;
-  background: none;
+  background: #FFFFFF;
   border: none;
   padding: 0;
-  overflow: hidden;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger {
-  background-color: #FFFFFF;
+.menu-container .segment-menu .segment-btn .dish-name-description {
+  width: 280px;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description {
-  display: flex;
-  align-items: start;
-  justify-content: start;
+  justify-content: center;
   padding-left: 15px;
   flex-direction: column;
   gap: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: width 250ms ease-in;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description .dish-name {
+.menu-container .segment-menu .segment-btn .dish-name-description .dish-name {
+  width: 100%;
   text-align: left;
-  width: 280px;
   font-size: 18px;
   font-weight: 500;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: width 250ms ease-in;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .dish-name-description .dish-description {
+.menu-container .segment-menu .segment-btn .dish-name-description .dish-description {
+  max-width: 100%;
   text-align: left;
-  width: 280px;
   font-size: 15px;
   font-weight: 300;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: width 250ms ease-in;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price {
-  margin-right: -60px;
-  display: flex;
-  width: 116px;
+.menu-container .segment-menu .segment-btn .dish-detail-container {
   height: 70px;
-  transition: transform 250ms ease-in;
-}
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .dish-detail {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: end;
-  padding-bottom: 12px;
   width: 56px;
+  margin: 0;
+  transform: translateX(0);
+  transition: transform 250ms ease-in;
+}
+.menu-container .segment-menu .segment-btn .dish-detail-container .dish-detail {
+  margin: 0 0 12px 0;
   font-size: 15px;
   font-weight: 700;
-  margin: 0;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider {
+.menu-container .segment-menu .segment-btn .slider {
+  right: 0;
+  margin-right: -60px;
+  position: absolute;
+  width: 60px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 60px;
-  height: 70px;
-  border-radius: 0 20% 20% 0;
+  border-radius: 0 15px 15px 0;
+  transform: none;
+  transition: transform 250ms ease-in;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider .checkmark-circle {
+.menu-container .segment-menu .segment-btn .slider .checkmark-circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,142 +223,59 @@ body {
   background-color: #FFFFFF;
   border-radius: 50%;
 }
-.menu-container .segment-menu .segment-btn .segment-btn-trigger .slider-price .slider .checkmark-circle .fa-solid {
+.menu-container .segment-menu .segment-btn .slider .checkmark-circle .fa-solid {
   color: #99E2D0;
   font-size: 14px;
 }
-.menu-container .segment-menu .segment-btn #starter-one:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-two:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-three:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-four:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-five:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-six:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-seven:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-eight:checked + .segment-btn-trigger .slider-price,
-.menu-container .segment-menu .segment-btn #starter-nine:checked + .segment-btn-trigger .slider-price {
+.menu-container .segment-menu .segment-btn:hover .slider {
   transform: translateX(-60px);
 }
-.menu-container .segment-menu .segment-btn #starter-one:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-two:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-three:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-four:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-five:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-six:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-seven:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-eight:checked + .segment-btn-trigger .dish-description,
-.menu-container .segment-menu .segment-btn #starter-nine:checked + .segment-btn-trigger .dish-description {
-  width: 220px;
+.menu-container .segment-menu .segment-btn:hover .dish-detail-container {
+  transform: translateX(-60px);
 }
-.menu-container .segment-menu .segment-btn #starter-one:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-two:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-three:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-four:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-five:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-six:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-seven:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-eight:checked + .segment-btn-trigger .dish-name,
-.menu-container .segment-menu .segment-btn #starter-nine:checked + .segment-btn-trigger .dish-name {
-  width: 220px;
+.menu-container .segment-menu .segment-btn:hover .dish-name-description {
+  width: 200px;
 }
-.menu-container .segment-menu .segment-btn #starter-one,
-.menu-container .segment-menu .segment-btn #starter-two,
-.menu-container .segment-menu .segment-btn #starter-three,
-.menu-container .segment-menu .segment-btn #starter-four,
-.menu-container .segment-menu .segment-btn #starter-five,
-.menu-container .segment-menu .segment-btn #starter-six,
-.menu-container .segment-menu .segment-btn #starter-seven,
-.menu-container .segment-menu .segment-btn #starter-eight,
-.menu-container .segment-menu .segment-btn #starter-nine {
-  display: none;
-}
-.menu-container .segment-menu .segment-btn.starter-one-hidden,
-.menu-container .segment-menu .segment-btn.courses-one-hidden,
-.menu-container .segment-menu .segment-btn.desserts-one-hidden {
-  animation: appearDishOne 1500ms ease forwards;
+.menu-container .segment-menu .btn-one-hidden {
+  animation: appearOne 1500ms ease forwards;
   animation-delay: 200ms;
 }
-.menu-container .segment-menu .segment-btn.starter-two-hidden,
-.menu-container .segment-menu .segment-btn.courses-two-hidden,
-.menu-container .segment-menu .segment-btn.desserts-two-hidden {
+.menu-container .segment-menu .btn-two-hidden {
   animation: appearTwo 1300ms ease forwards;
   animation-delay: 200ms;
 }
-.menu-container .segment-menu .segment-btn.starter-three-hidden,
-.menu-container .segment-menu .segment-btn.courses-three-hidden,
-.menu-container .segment-menu .segment-btn.desserts-three-hidden {
+.menu-container .segment-menu .btn-three-hidden {
   animation: appearThree 1100ms ease forwards;
   animation-delay: 200ms;
 }
-@keyframes appearDishOne {
+@keyframes appearOne {
   from {
     transform: translateX(80%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes appearTwo {
   from {
     transform: translateX(60%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes appearThree {
   from {
     transform: translateX(40%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
-  }
-}
-@keyframes appearDishFour {
-  from {
-    transform: translateX(80%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes appearDishFive {
-  from {
-    transform: translateX(60%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes appearDishSix {
-  from {
-    transform: translateX(40%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes appearDishSeven {
-  from {
-    transform: translateX(80%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes appearTwo {
-  from {
-    transform: translateX(60%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes appearThree {
-  from {
-    transform: translateX(40%);
-  }
-  to {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 .menu-container .container-order-btn {
@@ -384,6 +304,7 @@ body {
   color: #FFFFFF;
 }
 
+/* end MENU block */
 footer {
   background-color: #353535;
   padding: 20px 26px 26px 26px;
@@ -469,11 +390,8 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   .main-container .menu-container .segment-btn {
     max-width: 634px;
   }
-  .main-container .menu-container .segment-btn .segment-btn-trigger .dish-name-description .dish-description {
-    transition: none;
-  }
-  .main-container .menu-container .segment-btn .segment-btn-trigger .dish-name-description .dish-name {
-    transition: none;
+  .main-container .menu-container .segment-btn:hover .dish-name-description {
+    width: 280px;
   }
   .main-container footer {
     width: 100%;
@@ -483,7 +401,7 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   }
   .main-container footer .footer-logo {
     width: 137px;
-    padding-left: 90px;
+    margin-left: 90px;
   }
   .main-container footer .footer-logo .footer-logo-image {
     margin: 0;

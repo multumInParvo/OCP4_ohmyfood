@@ -1,7 +1,7 @@
 // General
 * {
-    font-family: 'Shrikhand' sans-serif;
-    font-family: 'Roboto';
+    font-family: "Shrikhand", sans-serif;
+    font-family: "Roboto";
 } 
 
 /* var colors */ 
@@ -76,7 +76,8 @@ body {
 }
 // end IMAGE La palette du goût
 
-// MENU block
+                      /* MENU block */
+
 .menu-container {
     padding: 36px 13px 0 13px;
     display: flex;
@@ -113,7 +114,7 @@ body {
                         cursor: pointer;
                     }
 
-                    .fa-regular.fa-heart {
+                    .fa-regular.fa-heart {  
                         position: absolute;
                     }
 
@@ -125,8 +126,14 @@ body {
                         opacity: 0;
                         transition: all 500ms ease-in;
                     }
-                }
 
+                    // progressive fill of heart on hover
+                    .fa-solid.fa-heart:hover {
+                        opacity: 1;
+                    }
+                    // end progressive fill of heart on hover
+                }
+                // progressive fill of heart on click
                 #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
                     opacity: 1;
                 }
@@ -134,6 +141,7 @@ body {
                 #like-heart {
                     display: none;
                 }
+                // end progressive fill of heart on click
             }            
             // end like heart 
         }
@@ -172,269 +180,181 @@ body {
                 }
             }
         }
-        // buttons/menu
+                 // buttons/menu
         .segment-btn {
+            cursor: pointer;
+            overflow: hidden;
+            justify-content: space-between;
             position: relative;
+            display: flex;
             width: 100%;
             max-width: 349px;
             height: 70px;
-            background: none;
+            background: $ten;
             border: none;
             padding: 0;
-            overflow: hidden;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
 
-            .segment-btn-trigger {  
-                background-color: $ten; 
-                display: flex;            
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-            
-                .dish-name-description {
-                    display: flex;
-                    align-items: start;
-                    justify-content: start;
-                    padding-left: 15px;
-                    flex-direction: column;
-                    gap: 5px; 
+            .dish-name-description {
+                width: 280px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                padding-left: 15px;
+                flex-direction: column;
+                gap: 5px; 
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: width 250ms ease-in;
+                
+                .dish-name {
+                    width: 100%;
+                    text-align: left;           
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin: 0;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-
-                    .dish-name {
-                        text-align: left;
-                        width: 280px;
-                        font-size: 18px;
-                        font-weight: 500;
-                        margin: 0;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        transition: width 250ms ease-in;
-                    }
-            
-                    .dish-description {  
-                        text-align: left;
-                        width: 280px;                   
-                        font-size: 15px;
-                        font-weight: 300;
-                        margin: 0;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        transition: width 250ms ease-in;
-                    } 
                 }
-            
-                .slider-price {
-                    margin-right: -60px;
+
+                .dish-description {
+                    max-width: 100%;
+                    text-align: left;                                   
+                    font-size: 15px;
+                    font-weight: 300;
+                    margin: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            // dish price
+            .dish-detail-container {  
+                height: 70px;                                 
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: end;
+                width: 56px;
+                margin: 0;
+                transform: translateX(0);
+                transition: transform 250ms ease-in;
+
+                .dish-detail {
+                    margin: 0 0 12px 0;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+            }
+            // end // dish price
+
+            // light green slider
+            .slider {
+                right: 0;
+                margin-right: -60px;
+                position: absolute;
+                width: 60px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $two;
+                border-radius: 0 15px 15px 0; 
+                transform: none;
+                transition: transform 250ms ease-in;
+
+                .checkmark-circle {
                     display: flex;
-                    width: 116px;
-                    height: 70px;
-                    transition: transform 250ms ease-in;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $ten;
+                    border-radius: 50%;
 
-                    .dish-detail {
-                        display: flex;
-                        align-items: center;
-                        flex-direction: column;
-                        justify-content: end;
-                        padding-bottom: 12px;
-                        width: 56px;
-                        font-size: 15px;
-                        font-weight: 700;
-                        margin: 0;
-                    }
-            
-                    .slider {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $two;
-                        width: 60px;
-                        height: 70px;
-                        border-radius: 0 20% 20% 0;
-            
-                            .checkmark-circle {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 20px;
-                            height: 20px;
-                            background-color: $ten;
-                            border-radius: 50%;
-                    
-                            .fa-solid {
-                                color: $two;
-                                font-size: 14px;
-                            }
-                        }
+                    .fa-solid {
+                        color: $two;
+                        font-size: 14px;
                     }
                 }
-            } 
-
-
-            // animation for green slider on click
-            #starter-one:checked + .segment-btn-trigger .slider-price, 
-            #starter-two:checked + .segment-btn-trigger .slider-price, 
-            #starter-three:checked + .segment-btn-trigger .slider-price,
-            #starter-four:checked + .segment-btn-trigger .slider-price,
-            #starter-five:checked + .segment-btn-trigger .slider-price,
-            #starter-six:checked + .segment-btn-trigger .slider-price,
-            #starter-seven:checked + .segment-btn-trigger .slider-price,
-            #starter-eight:checked + .segment-btn-trigger .slider-price,
-            #starter-nine:checked + .segment-btn-trigger .slider-price {
-                transform: translateX(-60px);    
             }
+            // end light green slider
+        }
 
-            // animation for ellipsis + green slider on click
-            #starter-one:checked + .segment-btn-trigger .dish-description, 
-            #starter-two:checked + .segment-btn-trigger .dish-description, 
-            #starter-three:checked + .segment-btn-trigger .dish-description,
-            #starter-four:checked + .segment-btn-trigger .dish-description,
-            #starter-five:checked + .segment-btn-trigger .dish-description,
-            #starter-six:checked + .segment-btn-trigger .dish-description,
-            #starter-seven:checked + .segment-btn-trigger .dish-description,
-            #starter-eight:checked + .segment-btn-trigger .dish-description,
-            #starter-nine:checked + .segment-btn-trigger .dish-description {
-                width: 220px;
-            }
+        // green slider + price transition
+        .segment-btn:hover .slider {
+            transform: translateX(-60px);
+        }
 
-            #starter-one:checked + .segment-btn-trigger .dish-name, 
-            #starter-two:checked + .segment-btn-trigger .dish-name, 
-            #starter-three:checked + .segment-btn-trigger .dish-name,
-            #starter-four:checked + .segment-btn-trigger .dish-name,
-            #starter-five:checked + .segment-btn-trigger .dish-name,
-            #starter-six:checked + .segment-btn-trigger .dish-name,
-            #starter-seven:checked + .segment-btn-trigger .dish-name,
-            #starter-eight:checked + .segment-btn-trigger .dish-name,
-            #starter-nine:checked + .segment-btn-trigger .dish-name {
-                width: 220px;
-            }
+        .segment-btn:hover .dish-detail-container {
+            transform: translateX(-60px);
+        }
+        // end green slider + price transition
 
-            // dishes checkbox hidden 
-            #starter-one, 
-            #starter-two, 
-            #starter-three,
-            #starter-four,
-            #starter-five,
-            #starter-six,
-            #starter-seven,
-            #starter-eight,
-            #starter-nine {
-                display: none;
-            } 
-            // end dishes checkbox hidden 
-        }  
-        // dishes animation
-        .segment-btn.starter-one-hidden,
-        .segment-btn.courses-one-hidden,
-        .segment-btn.desserts-one-hidden {
-            animation: appearDishOne 1500ms ease forwards;
+        // ellipsis transition
+        .segment-btn:hover .dish-name-description {
+            width: 200px;
+        }
+        // end ellipsis transition
+
+
+        // progressive apparition animation for buttons 
+        .btn-one-hidden {
+            animation: appearOne 1500ms ease forwards;
             animation-delay: 200ms;
         }
-        .segment-btn.starter-two-hidden,
-        .segment-btn.courses-two-hidden,
-        .segment-btn.desserts-two-hidden {
+        .btn-two-hidden {
             animation: appearTwo 1300ms ease forwards;
             animation-delay: 200ms;
         }
-        .segment-btn.starter-three-hidden,
-        .segment-btn.courses-three-hidden,
-        .segment-btn.desserts-three-hidden {
+        .btn-three-hidden {
             animation: appearThree 1100ms ease forwards;
             animation-delay: 200ms;
         }
-        // end dishes animation
+        // end progressive apparition animation for buttons
 
-        // ENTRÉES keyframes
-        @keyframes appearDishOne {
+        // keyframes for buttons animation
+        @keyframes appearOne {
             from  {
             transform: translateX(80%);
+            opacity: 0;
             }   
             to  {
             transform: translateX(0);
+            opacity: 1;
             }   
         }
         @keyframes appearTwo {
             from  {
             transform: translateX(60%);
+            opacity: 0;
             }   
             to  {
             transform: translateX(0);
+            opacity: 1;
             }   
         }
         @keyframes appearThree {
             from  {
             transform: translateX(40%);
+            opacity: 0;
             }   
             to  {
             transform: translateX(0);
+            opacity: 1;
             }   
         }
-        // end ENTRÉES keyframes
+        //end keyframes for buttons animation
 
-        // PLATS keyframes
-    @keyframes appearDishFour {
-            from  {
-            transform: translateX(80%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        @keyframes appearDishFive {
-            from  {
-            transform: translateX(60%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        @keyframes appearDishSix {
-            from  {
-            transform: translateX(40%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        // end PLATS keyframes
-
-        // DESSERTS keyframes
-        @keyframes appearDishSeven {
-            from  {
-            transform: translateX(80%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        @keyframes appearTwo {
-            from  {
-            transform: translateX(60%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        @keyframes appearThree {
-            from  {
-            transform: translateX(40%);
-            }   
-            to  {
-            transform: translateX(0);
-            }   
-        }
-        // end DESSERTS keyframes
-
-        // end buttons/menu
+        //end buttons/menu
     }
     // end title of menu segment
     
-
-    // commander button
+    // commander/order button
     .container-order-btn {
         display: flex;
         justify-content: center;
@@ -463,9 +383,9 @@ body {
             }
         }
     }    
-    // end commander button
+    // end commander/order button
 }    
-// end MENU block
+/* end MENU block */
 
 //FOOTER block
 footer {
@@ -542,6 +462,7 @@ footer {
             .header-components {
                 padding: 30px 0;
                 width: calc(50% + 58px);
+
                 .logo-container {
                     .logo-image {
                         width: 200px;
@@ -577,20 +498,11 @@ footer {
             }
 
             .segment-btn {
-                max-width: 634px;
+                max-width: 634px;   
+            }
 
-                .segment-btn-trigger {
-
-                    .dish-name-description {
-                        
-                        .dish-description {
-                            transition: none;
-                        }
-                        .dish-name {
-                            transition: none;
-                        }
-                    }
-                }
+            .segment-btn:hover .dish-name-description {
+                width: 280px;
             }
         }
         // end MENU block
@@ -604,7 +516,7 @@ footer {
             
             .footer-logo {
                 width: 137px;
-                padding-left: 90px;
+                margin-left: 90px;
 
                 .footer-logo-image {
                     margin: 0;
