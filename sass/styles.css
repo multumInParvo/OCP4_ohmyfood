@@ -13,7 +13,7 @@ body {
 .loader {
   flex-direction: column;
   position: fixed;
-  background: #353535;
+  background: #7E7E7E;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,8 @@ body {
   height: 100vh;
   animation: fader 2500ms forwards;
   animation-delay: 600ms;
-  gap: 300px;
+  gap: 150px;
+  z-index: 1;
 }
 .loader .loader-logo {
   filter: invert(100%);
@@ -104,7 +105,6 @@ body {
   height: 28.09px;
 }
 
-/* LOCATION block */
 .location-container {
   display: flex;
   flex-direction: row;
@@ -123,8 +123,6 @@ body {
   color: #353535;
 }
 
-/* end LOCATION block */
-/* RESERVATION block */
 .reservation-container {
   width: 100%;
   display: flex;
@@ -139,6 +137,7 @@ body {
   padding: 0 50px;
 }
 .reservation-container .reservation-description {
+  padding: 0 10px;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 27px;
@@ -168,13 +167,13 @@ body {
   color: #FFFFFF;
 }
 
-/* end RESERVATION block */
-/* FUNCTIONING block */
 .functioning-container {
   padding: 0 20px;
   margin-bottom: 64px;
 }
 .functioning-container .functioning-title {
+  padding-top: 47px;
+  padding-bottom: 32px;
   font-weight: 700;
   margin: 0;
 }
@@ -182,8 +181,8 @@ body {
   padding-left: 12px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   gap: 25px;
 }
 .functioning-container .functioning-btns-group .functioning-btn {
@@ -195,7 +194,7 @@ body {
   flex-direction: row;
   align-items: center;
   height: 72px;
-  width: 322.5px;
+  width: 100%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .functioning-container .functioning-btns-group .functioning-btn .violet-circle {
@@ -225,8 +224,6 @@ body {
   font-weight: 500;
 }
 
-/* end FUNCTIONING block */
-/* RESTAURANTS block */
 .restaurants-main {
   background-color: #F6F6F6;
   width: 100%;
@@ -324,6 +321,9 @@ body {
   opacity: 0;
   transition: all 500ms ease-in;
 }
+.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container .heart-trigger .fa-solid.fa-heart:hover {
+  opacity: 1;
+}
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
@@ -337,8 +337,6 @@ body {
   display: none;
 }
 
-/* end RESTAURANTS block */
-/* FOOTER block */
 footer {
   background-color: #353535;
   padding: 20px 26px 26px 26px;
@@ -384,10 +382,8 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   color: #FFFFFF;
 }
 
-/* end FOOTER block */
 /* tablet and desktop (equal or more than 768px) */
-@media (min-width: 768px) {
-  /* HEADER block */
+@media (min-width: 1024px) {
   .main-header {
     height: 96px;
   }
@@ -395,8 +391,6 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     width: 200px;
     height: 34px;
   }
-  /* end HEADER block */
-  /* RESERVATION block */
   .reservation-container {
     padding: 30px 0 30px 0;
     gap: 30px;
@@ -414,49 +408,51 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     margin: 0;
     padding: 0;
   }
-  /* end RESERVATION block */
-  /* FUNCTIONING block */
   .functioning-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 29px;
-    padding: 50px 0;
+    padding: 49px 17.5px;
     margin: 0;
+  }
+  .functioning-container .functioning-title {
+    padding: 0;
+    width: 100%;
   }
   .functioning-container .functioning-btns-group {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 35px;
+    flex-direction: row;
+    gap: 3.37%;
     justify-content: center;
   }
-  /* end FUNCTIONING block */
-  /* RESTAURANTS block */
+  .functioning-container .functioning-btns-group .functioning-btn {
+    width: 322.5px;
+  }
   .restaurants-main {
+    display: flex;
+    align-items: center;
     flex-direction: column;
     padding-bottom: 30px;
   }
   .restaurants-main .restaurants-title {
     margin: 0;
-    padding: 29px 0;
+    padding: 29px 17.5px;
   }
   .restaurants-main .restos-cards-container {
+    max-width: 1080px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
     row-gap: 50px;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
+    justify-content: space-between;
     padding: 0 17.5px;
   }
   .restaurants-main .restos-cards-container .resto-card-link {
     width: 490px;
     height: 251px;
   }
-  /* end RESTAURANTS block */
-  /* FOOTER block */
   footer {
     padding: 65px 30px 30px 0;
     display: flex;
@@ -492,5 +488,5 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   footer .footer-icon-description-text .footer-text-info .footer-text-description {
     margin: 0;
   }
-  /* end FOOTER block */
-}/*# sourceMappingURL=styles.css.map */
+}
+/* tablet and desktop (equal or more than 768px) *//*# sourceMappingURL=styles.css.map */

@@ -28,7 +28,7 @@ body {
     .loader {
         flex-direction: column;
         position: fixed;
-        background: #353535;
+        background: $twelve;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,7 +36,8 @@ body {
         height: 100vh;
         animation: fader 2500ms forwards;
         animation-delay: 600ms;
-        gap: 300px;
+        gap: 150px;
+        z-index: 1;
 
         .loader-logo {
             filter: invert(100%);
@@ -95,16 +96,13 @@ body {
                 from { transform: translateY(0) }
                 to { transform: translateY(-50px) }
             }
-
         }
     }
-    // LOADER HOMEPAGE
-
+    // end LOADER HOMEPAGE
 
     .main-container {
         width: 100%; 
     }
-
 
     // HEADER block
     .main-header {
@@ -131,7 +129,7 @@ body {
     }
     // end HEADER block
 
-    /* LOCATION block */
+    // LOCATION block
     .location-container {
         display: flex;
         flex-direction: row;
@@ -151,9 +149,9 @@ body {
             color: $eight;
         }
     }
-    /* end LOCATION block */
+    // end LOCATION block
 
-    /* RESERVATION block */
+    // RESERVATION block
     .reservation-container {
         width: 100%;
         display: flex;
@@ -168,6 +166,7 @@ body {
             padding: 0 50px;
         }
         .reservation-description {
+            padding: 0 10px;
             font-weight: 300;
             margin-top: 0;
             margin-bottom: 27px;
@@ -200,14 +199,16 @@ body {
             }
         }
     }
-    /* end RESERVATION block */
+    // end RESERVATION block
 
-    /* FUNCTIONING block */
+    // FUNCTIONING block
     .functioning-container {
         padding: 0 20px;
         margin-bottom: 64px;
             
         .functioning-title {
+            padding-top: 47px;
+            padding-bottom: 32px;
             font-weight: 700;
             margin: 0;
         }
@@ -216,8 +217,8 @@ body {
             padding-left: 12px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
             gap: 25px;
 
             .functioning-btn {
@@ -229,7 +230,7 @@ body {
                 flex-direction: row;
                 align-items: center;
                 height: 72px;
-                width: 322.5px;
+                width: 100%;
                 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
                 .violet-circle {
@@ -264,10 +265,9 @@ body {
             }
         }
     }
+    // end FUNCTIONING block
 
-    /* end FUNCTIONING block */
-
-    /* RESTAURANTS block */
+    // RESTAURANTS block
     .restaurants-main {
         background-color: $nine;
         width: 100%;
@@ -372,6 +372,12 @@ body {
                                     opacity: 0;
                                     transition: all 500ms ease-in;
                                 }
+
+                                // progressive fill of heart on hover
+                                .fa-solid.fa-heart:hover {
+                                    opacity: 1;
+                                }
+                                // end progressive fill of heart on hover
                             }
 
                             #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
@@ -394,9 +400,9 @@ body {
             }
         }
     }
-    /* end RESTAURANTS block */
+    // end RESTAURANTS block
 
-    /* FOOTER block */
+    // FOOTER block
     footer {
         background-color: $eight;
         padding: 20px 26px 26px 26px;
@@ -453,15 +459,14 @@ body {
             } 
         }
     }
-    /* end FOOTER block */
+    // end FOOTER block
 
 
 
     /* tablet and desktop (equal or more than 768px) */
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
 
-        /* HEADER block */
-
+        // HEADER block
         .main-header {
             height: 96px;
 
@@ -472,10 +477,9 @@ body {
                 }
             }
         }
-        /* end HEADER block */
+        // end HEADER block
 
-        /* RESERVATION block */
-
+        // RESERVATION block
         .reservation-container {
             padding: 30px 0 30px 0;
             gap: 30px;
@@ -496,54 +500,55 @@ body {
                 padding: 0;
             }
         }
+        // end RESERVATION block
 
-        /* end RESERVATION block */
-
-        /* FUNCTIONING block */
-
+        // FUNCTIONING block
         .functioning-container {
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 29px;
-            padding: 50px 0;
+            padding: 49px 17.5px;
             margin: 0;
 
-
             .functioning-title {
-            
+                padding: 0;
+                width: 100%;
             }
             
-
             .functioning-btns-group {
                 display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                gap: 35px;
+                flex-direction: row;
+                gap: 3.37%;
                 justify-content: center;
+
+                .functioning-btn {
+                    width: 322.5px;
+                }
             }
         }
+        // end FUNCTIONING block
 
-        /* end FUNCTIONING block */
-
-        /* RESTAURANTS block */
-
+        // RESTAURANTS block
         .restaurants-main {
+            display: flex;
+            align-items: center;
             flex-direction: column;
             padding-bottom: 30px;
 
             .restaurants-title {
                 margin: 0;
-                padding: 29px 0;
+                padding: 29px 17.5px;
             }
 
             .restos-cards-container {
+                max-width: 1080px;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
                 margin: 0;
                 row-gap: 50px;
-                column-gap: 100px;
+                justify-content: space-between;
                 padding: 0 17.5px;
 
                 .resto-card-link {
@@ -552,10 +557,9 @@ body {
                 }
             }
         }
-        /* end RESTAURANTS block */
+        // end RESTAURANTS block
 
-        /* FOOTER block */
-
+        // FOOTER block
         footer {
             padding: 65px 30px 30px 0; 
             display: flex;
@@ -599,5 +603,6 @@ body {
                 }
             }
         }    
-        /* end FOOTER block */
+        // end FOOTER block
     }
+    /* tablet and desktop (equal or more than 768px) */
