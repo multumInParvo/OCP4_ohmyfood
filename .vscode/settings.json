@@ -1,5 +1,6 @@
 {
-    "liveSassCompile.settings.showOutputWindowOn": "None"
+    "liveSassCompile.settings.showOutputWindowOn": "None",
+    "livePreview.defaultPreviewPath": "/restaurants/la_palette_du_gout.html"
 }
 
 /* Configuration setting for (VSCode) editor, specifically related to the "Live Sass Compiler" extension */
