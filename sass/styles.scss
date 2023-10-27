@@ -380,13 +380,6 @@ body {
                                 // end progressive fill of heart on hover
                             }
 
-                            #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
-                            #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
-                            #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
-                            #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
-                                opacity: 1;
-                            }
-
                             #like-heart-one,
                             #like-heart-two,
                             #like-heart-three,
@@ -554,6 +547,15 @@ body {
                 .resto-card-link {
                     width: 490px;
                     height: 251px;
+
+                    // clickable heart/like for desktop version    
+                    #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
+                    #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
+                    #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
+                    #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
+                        opacity: 1;
+                    }
+                    // end clickable heart/like for desktop version 
                 }
             }
         }

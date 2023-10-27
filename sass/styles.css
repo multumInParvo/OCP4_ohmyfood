@@ -324,12 +324,6 @@ body {
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container .heart-trigger .fa-solid.fa-heart:hover {
   opacity: 1;
 }
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
-.restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
-  opacity: 1;
-}
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-one,
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-two,
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .heart-container #like-heart-three,
@@ -452,6 +446,12 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   .restaurants-main .restos-cards-container .resto-card-link {
     width: 490px;
     height: 251px;
+  }
+  .restaurants-main .restos-cards-container .resto-card-link #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
+  .restaurants-main .restos-cards-container .resto-card-link #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
+  .restaurants-main .restos-cards-container .resto-card-link #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
+  .restaurants-main .restos-cards-container .resto-card-link #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
+    opacity: 1;
   }
   footer {
     padding: 65px 30px 30px 0;
