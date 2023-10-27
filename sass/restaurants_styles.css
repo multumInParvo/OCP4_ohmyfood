@@ -211,7 +211,6 @@ body {
   align-items: center;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transform: none;
   transition: transform 250ms ease-in;
 }
 .menu-container .segment-menu .segment-btn .slider .checkmark-circle {
@@ -237,58 +236,58 @@ body {
   width: 200px;
 }
 .menu-container .segment-menu .btn-one-hidden {
-  animation: appearOne 1500ms ease forwards;
-  animation-delay: 200ms;
+  animation: appearOne 2000ms ease forwards;
+  animation-delay: 300ms;
 }
 .menu-container .segment-menu .btn-two-hidden {
-  animation: appearTwo 1300ms ease forwards;
-  animation-delay: 200ms;
+  animation: appearTwo 1800ms ease forwards;
+  animation-delay: 300ms;
 }
 .menu-container .segment-menu .btn-three-hidden {
-  animation: appearThree 1100ms ease forwards;
-  animation-delay: 200ms;
+  animation: appearThree 1600ms ease forwards;
+  animation-delay: 300ms;
 }
 .menu-container .segment-menu .btn-four-hidden {
-  animation: appearFour 900ms ease forwards;
-  animation-delay: 200ms;
+  animation: appearFour 1400ms ease forwards;
+  animation-delay: 300ms;
 }
 @keyframes appearOne {
   from {
-    transform: translateX(80%);
+    transform: scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes appearTwo {
   from {
-    transform: translateX(60%);
+    transform: scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes appearThree {
   from {
-    transform: translateX(40%);
+    transform: scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes appearFour {
   from {
-    transform: translateX(20%);
+    transform: scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
