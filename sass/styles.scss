@@ -22,6 +22,7 @@ $thirteen: #000000;
 
 body {
     margin: 0;
+box-sizing: border-box;
 }
 
     // LOADER HOMEPAGE
@@ -282,7 +283,7 @@ body {
         }
 
         .restos-cards-container {
-            margin: 0 17.5px;
+            margin: 0 13.5px;
 
             .resto-card-link {
                 text-decoration: none;
@@ -542,7 +543,7 @@ body {
                 margin: 0;
                 row-gap: 50px;
                 justify-content: space-between;
-                padding: 0 17.5px;
+                margin: 0 13.5px;
 
                 .resto-card-link {
                     width: 490px;

@@ -8,6 +8,7 @@
 /* end var colors */
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .loader {
@@ -237,7 +238,7 @@ body {
   font-weight: 700;
 }
 .restaurants-main .restos-cards-container {
-  margin: 0 17.5px;
+  margin: 0 13.5px;
 }
 .restaurants-main .restos-cards-container .resto-card-link {
   text-decoration: none;
@@ -441,7 +442,7 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     margin: 0;
     row-gap: 50px;
     justify-content: space-between;
-    padding: 0 17.5px;
+    margin: 0 13.5px;
   }
   .restaurants-main .restos-cards-container .resto-card-link {
     width: 490px;
