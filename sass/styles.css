@@ -230,12 +230,12 @@ body {
   width: 100%;
   padding-bottom: 49px;
 }
-.restaurants-main .restaurants-title {
+.restaurants-main .restaurants-title-container .restaurants-title {
   padding-top: 52px;
   padding-bottom: 20px;
-  margin: 0 17.5px;
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
 }
 .restaurants-main .restos-cards-container {
   margin: 0 13.5px;
@@ -425,14 +425,11 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     width: 322.5px;
   }
   .restaurants-main {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-bottom: 30px;
-  }
-  .restaurants-main .restaurants-title {
-    margin: 0;
-    padding: 29px 17.5px;
   }
   .restaurants-main .restos-cards-container {
     max-width: 1080px;
@@ -443,6 +440,14 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     row-gap: 50px;
     justify-content: space-between;
     margin: 0 13.5px;
+  }
+  .restaurants-main .restos-cards-container .restaurants-title-container {
+    width: 100%;
+  }
+  .restaurants-main .restos-cards-container .restaurants-title-container .restaurants-title {
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin: 0;
   }
   .restaurants-main .restos-cards-container .resto-card-link {
     width: 490px;
