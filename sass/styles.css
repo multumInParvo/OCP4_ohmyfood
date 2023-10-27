@@ -172,7 +172,7 @@ body {
   padding: 0 20px;
   margin-bottom: 64px;
 }
-.functioning-container .functioning-title {
+.functioning-container .functioning-title-container .functioning-title {
   padding-top: 47px;
   padding-bottom: 32px;
   font-weight: 700;
@@ -411,14 +411,18 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     padding: 49px 17.5px;
     margin: 0;
   }
-  .functioning-container .functioning-title {
-    padding: 0;
+  .functioning-container .functioning-title-container {
     width: 100%;
+    max-width: 1080px;
+  }
+  .functioning-container .functioning-title-container .functioning-title {
+    padding: 0;
   }
   .functioning-container .functioning-btns-group {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 3.37%;
+    gap: 2.5%;
     justify-content: center;
   }
   .functioning-container .functioning-btns-group .functioning-btn {

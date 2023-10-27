@@ -206,14 +206,16 @@ box-sizing: border-box;
     .functioning-container {
         padding: 0 20px;
         margin-bottom: 64px;
-            
-        .functioning-title {
-            padding-top: 47px;
-            padding-bottom: 32px;
-            font-weight: 700;
-            margin: 0;
+
+        .functioning-title-container {
+            .functioning-title {
+                padding-top: 47px;
+                padding-bottom: 32px;
+                font-weight: 700;
+                margin: 0;
+            }
         }
-        
+            
         .functioning-btns-group {
             padding-left: 12px;
             display: flex;
@@ -507,15 +509,20 @@ box-sizing: border-box;
             padding: 49px 17.5px;
             margin: 0;
 
-            .functioning-title {
-                padding: 0;
+            .functioning-title-container {
                 width: 100%;
+                max-width: 1080px;
+
+                .functioning-title {
+                    padding: 0;
+                }
             }
             
             .functioning-btns-group {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
-                gap: 3.37%;
+                gap: 2.5%;
                 justify-content: center;
 
                 .functioning-btn {
