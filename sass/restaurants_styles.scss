@@ -133,15 +133,12 @@ body {
                     }
                     // end progressive fill of heart on hover
                 }
-                // progressive fill of heart on click
-                #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
-                    opacity: 1;
-                }
-
+                // hidden checkbox of heart on click for desktop version
                 #like-heart {
                     display: none;
                 }
-                // end progressive fill of heart on click
+                // end hidden checkbox of heart on click for desktop version
+                
             }            
             // end like heart 
         }
@@ -511,6 +508,12 @@ footer {
 
             .resto-name-like {
                 padding: 0;
+
+                // progressive fill of heart on click 
+                #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
+                    opacity: 1;
+                }
+                // end progressive fill of heart on click
             }
 
             .segment-btn {

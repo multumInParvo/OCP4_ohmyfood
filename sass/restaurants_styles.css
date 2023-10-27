@@ -101,9 +101,6 @@ body {
 .menu-container .resto-title-container .resto-name-like .heart-container .heart-trigger .fa-solid.fa-heart:hover {
   opacity: 1;
 }
-.menu-container .resto-title-container .resto-name-like .heart-container #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
-  opacity: 1;
-}
 .menu-container .resto-title-container .resto-name-like .heart-container #like-heart {
   display: none;
 }
@@ -399,6 +396,9 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   }
   .main-container .menu-container .resto-name-like {
     padding: 0;
+  }
+  .main-container .menu-container .resto-name-like #like-heart:checked + .heart-trigger .fa-solid.fa-heart {
+    opacity: 1;
   }
   .main-container .menu-container .segment-btn {
     max-width: 634px;
