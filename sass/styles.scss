@@ -253,9 +253,14 @@ box-sizing: border-box;
                 }
 
                 .fa-mobile-screen-button,
-                .fa-list-ul,
-                .fa-store {
+                .fa-list-ul {
                     color: $twelve;
+                    margin: 0 24px;
+                    font-size: 18px;
+                }
+
+                .fa-store {
+                    color: $six;
                     margin: 0 24px;
                     font-size: 18px;
                 }

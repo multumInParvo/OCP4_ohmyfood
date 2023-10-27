@@ -213,9 +213,13 @@ body {
   margin: 0;
 }
 .functioning-container .functioning-btns-group .functioning-btn .fa-mobile-screen-button,
-.functioning-container .functioning-btns-group .functioning-btn .fa-list-ul,
-.functioning-container .functioning-btns-group .functioning-btn .fa-store {
+.functioning-container .functioning-btns-group .functioning-btn .fa-list-ul {
   color: #7E7E7E;
+  margin: 0 24px;
+  font-size: 18px;
+}
+.functioning-container .functioning-btns-group .functioning-btn .fa-store {
+  color: #9356DC;
   margin: 0 24px;
   font-size: 18px;
 }
