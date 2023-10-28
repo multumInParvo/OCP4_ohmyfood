@@ -1,11 +1,8 @@
-/* General*/
 * {
   font-family: "Shrikhand", sans-serif;
   font-family: "Roboto";
 }
 
-/* var colors */
-/* end var colors */
 body {
   margin: 0;
   box-sizing: border-box;
@@ -237,15 +234,15 @@ body {
   width: 100%;
   padding-bottom: 49px;
 }
-.restaurants-main .restaurants-title-container .restaurants-title {
+.restaurants-main .restos-cards-container {
+  margin: 0 13.5px;
+}
+.restaurants-main .restos-cards-container .restaurants-title-container .restaurants-title {
   padding-top: 52px;
   padding-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
   margin: 0;
-}
-.restaurants-main .restos-cards-container {
-  margin: 0 13.5px;
 }
 .restaurants-main .restos-cards-container .resto-card-link {
   text-decoration: none;
@@ -288,8 +285,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* icon heart */
-  /* end icon heart */
 }
 .restaurants-main .restos-cards-container .resto-card-link .resto-card .resto-description .resto-name-location {
   width: auto;
@@ -378,7 +373,7 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   color: #FFFFFF;
 }
 
-/* tablet and desktop (equal or more than 768px) */
+/* tablet and desktop (equal or more than 1024px) */
 @media (min-width: 1024px) {
   .main-header {
     height: 96px;
@@ -498,4 +493,4 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     margin: 0;
   }
 }
-/* tablet and desktop (equal or more than 768px) *//*# sourceMappingURL=styles.css.map */
+/* end tablet and desktop (equal or more than 1024px) *//*# sourceMappingURL=styles.css.map */

@@ -1,10 +1,10 @@
-/* General*/
+// General
 * {
     font-family: 'Shrikhand', sans-serif;
     font-family: 'Roboto';
 } 
 
-/* var colors */ 
+// var colors
 $one: #F3F3F3;
 $two: #99E2D0;
 $three: #008766;
@@ -18,14 +18,14 @@ $ten: #FFFFFF;
 $eleven: #FF79DA;
 $twelve: #7E7E7E;
 $thirteen: #000000;
-/* end var colors */ 
+// end var colors 
 
 body {
     margin: 0;
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-    // LOADER HOMEPAGE
+    // LOADER HOMEPAGE 
     .loader {
         flex-direction: column;
         position: fixed;
@@ -284,20 +284,20 @@ box-sizing: border-box;
         width: 100%;
         padding-bottom: 49px;
 
-        .restaurants-title-container {
-            .restaurants-title {
-                padding-top: 52px;
-                padding-bottom: 20px;
-                font-size: 24px;
-                font-weight: 700;
-                margin: 0;
-            }
-        }
-
         .restos-cards-container {
             margin: 0 13.5px;
 
-            .resto-card-link {
+            .restaurants-title-container { // .restaurants-title-container used for desktop version
+                .restaurants-title {
+                    padding-top: 52px;
+                    padding-bottom: 20px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+            }
+
+            .resto-card-link { // clickable area of restaurant button
                 text-decoration: none;
 
                 .resto-card {
@@ -305,7 +305,7 @@ box-sizing: border-box;
                     height: 251px;
                     padding-bottom: 18px;
 
-                    .resto-nouveau-container {
+                    .resto-nouveau-container { // green label nouveau on top of resto iamge
                         position: absolute;
                         width: 80px;
                         height: 29px;
@@ -322,7 +322,7 @@ box-sizing: border-box;
                             font-size: 14px;
                             color: $three;
                         }
-                    }
+                    } // end green label nouveau on top of resto iamge
 
                     .resto-image {
                         border-radius: 15px 15px 0 0;
@@ -360,7 +360,7 @@ box-sizing: border-box;
                                 color: $thirteen;
                             } 
                         }
-                        /* icon heart */ 
+                        // icon heart/like 
                         .heart-container {
                             display: flex;
                             align-self: center;
@@ -393,10 +393,10 @@ box-sizing: border-box;
                                 // end progressive fill of heart on hover
                             }
                         }            
-                        /* end icon heart */ 
+                        // end icon heart/like 
                     }
                 }
-            }
+            } // end clickable area of restaurant button
         }
     }
     // end RESTAURANTS block
@@ -462,7 +462,7 @@ box-sizing: border-box;
 
 
 
-    /* tablet and desktop (equal or more than 768px) */
+    /* tablet and desktop (equal or more than 1024px) */
     @media (min-width: 1024px) {
 
         // HEADER block
@@ -620,4 +620,6 @@ box-sizing: border-box;
         }    
         // end FOOTER block
     }
-    /* tablet and desktop (equal or more than 768px) */
+    /* end tablet and desktop (equal or more than 1024px) */
+
+    
