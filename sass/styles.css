@@ -148,24 +148,27 @@ body {
   text-align: center;
 }
 .reservation-container .explore-btn {
-  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   background: linear-gradient(180deg, #FF79DA -20%, #9356DC 100%);
   width: 218px;
   height: 50px;
-  border: none;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: opacity 800ms ease;
-}
-.reservation-container .explore-btn:hover {
-  opacity: 0.8;
+  margin-bottom: 60px;
 }
 .reservation-container .explore-btn .explore-btn-description {
   font-weight: 500;
-  text-decoration: none;
+  margin: 0;
   font-size: 16px;
   color: #FFFFFF;
+}
+.reservation-container .explore-btn:hover {
+  opacity: 0.8;
 }
 
 .functioning-container {
@@ -187,10 +190,10 @@ body {
   gap: 25px;
 }
 .functioning-container .functioning-btns-group .functioning-btn {
+  cursor: pointer;
   padding: 0;
   background-color: #F6F6F6;
   border-radius: 20px;
-  border: none;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -474,6 +477,7 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
   }
   footer .footer-logo {
     width: 137px;
+    padding-right: 30px;
     padding-left: 90px;
   }
   footer .footer-logo .footer-logo-image {
