@@ -53,7 +53,6 @@ body {
   height: 275px;
 }
 
-/* MENU block */
 .menu-container {
   padding: 36px 13px 0 13px;
   display: flex;
@@ -314,7 +313,6 @@ body {
   color: #FFFFFF;
 }
 
-/* end MENU block */
 footer {
   background-color: #353535;
   padding: 20px 26px 26px 26px;
