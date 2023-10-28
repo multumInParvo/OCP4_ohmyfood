@@ -458,6 +458,9 @@ footer .footer-icon-description-text .footer-text-info .footer-text-description 
     width: 490px;
     height: 251px;
   }
+  .restaurants-main .restos-cards-container .resto-card-link .resto-card {
+    padding-bottom: 0;
+  }
   footer {
     padding: 65px 0 30px 0;
     display: flex;

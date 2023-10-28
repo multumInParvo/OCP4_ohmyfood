@@ -564,6 +564,10 @@ box-sizing: border-box;
                 .resto-card-link {
                     width: 490px;
                     height: 251px;
+
+                    .resto-card {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
