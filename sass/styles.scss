@@ -360,12 +360,12 @@ box-sizing: border-box;
                                 color: $thirteen;
                             } 
                         }
-                        /* like heart */ 
+                        /* icon heart */ 
                         .heart-container {
                             display: flex;
                             align-self: center;
 
-                            .heart-trigger {
+                            .heart-box {
                                 .fa-heart {
                                     padding-right: 25px;
                                     font-size: 24px;
@@ -392,15 +392,8 @@ box-sizing: border-box;
                                 }
                                 // end progressive fill of heart on hover
                             }
-
-                            #like-heart-one,
-                            #like-heart-two,
-                            #like-heart-three,
-                            #like-heart-four {
-                                display: none;
-                            }
                         }            
-                        /* end like heart */ 
+                        /* end icon heart */ 
                     }
                 }
             }
@@ -571,15 +564,6 @@ box-sizing: border-box;
                 .resto-card-link {
                     width: 490px;
                     height: 251px;
-
-                    // clickable heart/like for desktop version    
-                    #like-heart-one:checked + .heart-trigger .fa-solid.fa-heart,
-                    #like-heart-two:checked + .heart-trigger .fa-solid.fa-heart,
-                    #like-heart-three:checked + .heart-trigger .fa-solid.fa-heart,
-                    #like-heart-four:checked + .heart-trigger .fa-solid.fa-heart {
-                        opacity: 1;
-                    }
-                    // end clickable heart/like for desktop version 
                 }
             }
         }
